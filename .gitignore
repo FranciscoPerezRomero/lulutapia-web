@@ -1,0 +1,22 @@
+# LaTeX auxiliares
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*.fls
+latex/*.fdb_latexmk
+latex/*.synctex.gz
+latex/*.blg
+latex/*.bbl
+
+# Pencil (archivos de diseño binarios — sí versionar el .pen)
+# (no excluir pencil/*.pen — es el entregable de mockups)
+
+# Editor
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db

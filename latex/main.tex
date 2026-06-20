@@ -1,0 +1,846 @@
+\documentclass[12pt, a4paper]{article}
+
+% ═══════════════════════════════════════════════════════════════
+%  PAQUETES
+% ═══════════════════════════════════════════════════════════════
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+
+% Colores
+\usepackage[dvipsnames, table]{xcolor}
+\definecolor{luluPurple}{HTML}{6B3FA0}
+\definecolor{luluTeal}{HTML}{2DC7C7}
+\definecolor{luluPink}{HTML}{E91E8C}
+\definecolor{luluLila}{HTML}{C084FC}
+\definecolor{luluDark}{HTML}{1A1A2E}
+\definecolor{luluMidGray}{HTML}{888888}
+\definecolor{luluLightGray}{HTML}{F0F0F0}
+\definecolor{wireGray}{HTML}{CCCCCC}
+
+% Tipografía
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Gráficos y diagramas
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows.meta, positioning, fit, calc}
+
+% Tablas
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% Listas
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, topsep=3pt, itemsep=2pt, parsep=0pt}
+\setlist[enumerate]{leftmargin=*, topsep=3pt, itemsep=2pt, parsep=0pt}
+\setlist[description]{leftmargin=0pt, style=nextline, topsep=4pt, itemsep=6pt}
+
+% Espaciado entre párrafos
+\usepackage{parskip}
+\setlength{\parskip}{5pt}
+
+% Índice compacto (solo secciones principales)
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{6pt}
+\setcounter{tocdepth}{1}
+
+% Formato de secciones
+\usepackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries\color{luluPurple}}{\thesection.}{0.6em}{}
+  [\vspace{2pt}\color{luluPurple}\rule{\textwidth}{0.8pt}\vspace{4pt}]
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{luluDark}}{\thesubsection.}{0.5em}{}
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+
+% Encabezado y pie de página
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{}
+\fancyhead[R]{}
+\setlength{\headheight}{14.2pt}
+\fancyfoot[C]{\small\color{luluMidGray}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Cajas de color
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+% Hipervínculos
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+
+
+% ═══════════════════════════════════════════════════════════════
+%  DOCUMENTO
+% ═══════════════════════════════════════════════════════════════
+\begin{document}
+
+
+% ───────────────────────────────────────────────────────────────
+%  PORTADA
+% ───────────────────────────────────────────────────────────────
+\begin{titlepage}
+\pagecolor{luluDark}
+\color{white}
+\centering
+\vspace*{2cm}
+
+% Banda de marca
+\begin{tikzpicture}
+  \fill[luluPurple] (-7.5, -1.3) rectangle (7.5, 1.3);
+  \node[font=\fontsize{28}{34}\selectfont\bfseries, white] at (0, 0.35) {LULÚ TAPIA};
+  \node[font=\large\itshape, white!80] at (0, -0.55) {Arte que cobra vida.};
+\end{tikzpicture}
+
+\vspace{1.2cm}
+
+{\LARGE\bfseries Propuesta de Sitio Web Personal}
+
+\vspace{0.4cm}
+
+{\large Actividad 1 — Planeación del Proyecto Web}
+
+\vspace{2.2cm}
+
+\begin{tabular}{rl}
+  \textbf{Alumna:}       & Lourdes del Ángel Vásquez Tapia \\[7pt]
+  \textbf{Materia:}      & Arquitectura de información y diseño  \\[7pt]
+  \textbf{Profesor(a):}  & María Isela García Velázquez       \\[7pt]
+  \textbf{Institución:}  & Universidad Tecnológica de México (UNITEC)     \\[7pt]
+  \textbf{Fecha:}        & Junio de 2026                    \\
+\end{tabular}
+
+\vfill
+
+\begin{tikzpicture}
+  \fill[luluTeal] (-7.5, -0.25) rectangle (7.5, 0.25);
+\end{tikzpicture}
+
+\vspace{0.5cm}
+
+\end{titlepage}
+
+\pagecolor{white}
+\color{black}
+
+% Tabla de contenidos
+{
+  \setlength{\parskip}{0pt}
+  \tableofcontents
+}
+\newpage
+
+
+% ───────────────────────────────────────────────────────────────
+%  1. PLANTEAMIENTO DEL PROYECTO
+% ───────────────────────────────────────────────────────────────
+\section{Planteamiento del Proyecto del Sitio Web}
+
+Este documento presenta la propuesta y planeación del sitio web personal de \textbf{Lourdes del Ángel Vásquez Tapia}, conocida profesionalmente como \textbf{Lulú Tapia}, artista freelance especializada en ilustración, modelado 3D, animación, storyboard, creación de personajes y vectorizado.
+
+El sitio busca consolidar una identidad digital propia que sirva al mismo tiempo de portafolio artístico, escaparate de servicios y canal directo de contacto con clientes. El objetivo es posicionar a Lulú Tapia como marca personal reconocible dentro del mercado creativo digital, tanto a nivel nacional como internacional.
+
+\subsection{Formato del Documento o Entregable}
+
+Este entregable corresponde a la \textbf{Fase 1 de planeación del proyecto web}, presentado en formato \textbf{PDF}. Abarca los elementos de arquitectura de información: objetivos, definición de audiencia, modelo de negocio, mapa del sitio, sistema de navegación, estilo visual, sistema de organización y wireframes de las páginas principales.
+
+No incluye código fuente, implementación visual definitiva ni activos gráficos finales, los cuales corresponden a fases posteriores del proyecto.
+
+\subsection{Tentativo URL del Sitio}
+
+\begin{tcolorbox}[
+  colback=luluPurple!8, colframe=luluPurple,
+  arc=4pt, boxrule=0.8pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt
+]
+\centering
+{\large\bfseries\color{luluPurple} www.lulutapia.com}\\[5pt]
+{\small\color{luluMidGray} Alternativa: \textbf{www.lulutapia.art}}
+\end{tcolorbox}
+
+Se prefiere el dominio \texttt{.com} por su universalidad y reconocimiento global. El dominio \texttt{.art} se considera alternativa válida dado que fue creado específicamente para el sector creativo y artístico. En ambos casos, el nombre es corto, memorable y coincide directamente con el nombre de marca.
+
+
+% ───────────────────────────────────────────────────────────────
+%  2. TEMA, MENSAJE, METAS Y OBJETIVO
+% ───────────────────────────────────────────────────────────────
+\section{Tema, Mensaje, Metas y Objetivo}
+
+\subsection{Tema}
+
+El tema central del sitio es la \textbf{identidad artística y capacidad profesional de Lulú Tapia} como creadora multimedia. El sitio no es únicamente un portafolio, sino una experiencia visual que comunica el estilo, la versatilidad y la calidad del trabajo de la artista. El hilo conductor es el arte como puente entre la imaginación y la comunicación visual.
+
+\subsection{Mensaje Central}
+
+\begin{tcolorbox}[
+  colback=luluDark, colframe=luluDark,
+  arc=4pt, boxrule=0pt,
+  left=10pt, right=10pt, top=10pt, bottom=10pt
+]
+\centering
+{\Large\itshape\color{white} ``Arte que cobra vida.''}
+\end{tcolorbox}
+
+Este mensaje resume la propuesta de valor de Lulú Tapia: su capacidad para llevar ideas, personajes e historias desde el concepto inicial hasta su realización en ilustración, movimiento y tridimensionalidad. Aplica tanto a clientes corporativos como a creadores independientes que buscan dar forma visual a sus proyectos.
+
+\subsection{Metas}
+
+\begin{enumerate}
+  \item Establecer una presencia digital profesional y coherente con la identidad artística de la creadora.
+  \item Atraer clientes potenciales de distintos sectores: entretenimiento, publicidad, videojuegos y medios digitales.
+  \item Posicionarse como referente en ilustración y animación freelance dentro del mercado hispanohablante e internacional.
+  \item Facilitar el contacto y la contratación directa de servicios creativos, eliminando intermediarios.
+  \item Construir una comunidad de seguidores interesados en el proceso creativo y el desarrollo artístico de la marca.
+\end{enumerate}
+
+\subsection{Objetivo}
+
+El sitio web funcionará como plataforma de presentación, captación de clientes y monetización de los servicios artísticos de Lulú Tapia; un punto de contacto directo entre la artista y quienes buscan sus servicios.
+
+
+% ───────────────────────────────────────────────────────────────
+%  3. LISTA DE SECCIONES Y SUS FUNCIONES
+% ───────────────────────────────────────────────────────────────
+\section{Lista de Secciones y Sus Funciones del Sitio}
+
+\begin{tcolorbox}[
+  colback=luluLightGray, colframe=luluMidGray!40,
+  arc=4pt, boxrule=0.6pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+]
+El sitio se estructura en \textbf{seis secciones}, cada una con un rol definido dentro de la experiencia de navegación.
+\end{tcolorbox}
+
+\vspace{6pt}
+
+\subsection{Inicio (Home)}
+\textbf{Función:} Primera impresión visual del visitante. Contiene un encabezado impactante con el nombre de marca, tagline y una selección destacada del portafolio. Incluye llamados a la acción (CTA) directos hacia el portafolio y los servicios. Es la sección que define el tono visual y narrativo de todo el sitio, y el punto de entrada principal del embudo de conversión.
+
+\subsection{Portafolio}
+\textbf{Función:} Galería principal de trabajos organizados por categoría. Permite al visitante explorar el trabajo de Lulú Tapia por disciplina: ilustración, modelado 3D, storyboard, animación, creación de personajes y vectorizado. Cada proyecto puede incluir descripción, herramientas utilizadas y referencias del proceso creativo. Es la sección más importante para generar confianza y convertir visitantes en clientes.
+
+\subsection{Servicios}
+\textbf{Función:} Descripción clara y detallada de cada servicio ofrecido, incluyendo qué contempla cada uno, tiempos de entrega estimados y forma de solicitar una cotización. Funciona como carta de ventas directa y elimina la fricción en el proceso de contratación al responder las preguntas más comunes del cliente.
+
+\subsection{Sobre mí}
+\textbf{Función:} Presenta la historia personal y profesional de la artista, su trayectoria, filosofía de trabajo, herramientas que domina y valores. Humaniza la marca y genera confianza en el cliente potencial. Puede incluir fotografía o autorretrato, software que maneja y un curriculum vitae descargable.
+
+\subsection{Proceso Creativo / Blog}
+\textbf{Función:} Espacio donde Lulú Tapia comparte avances de proyectos, reflexiones sobre su proceso artístico y novedades. Posiciona a la artista como autoridad en su campo, mejora el posicionamiento SEO del sitio y fomenta el retorno de visitantes a través de contenido fresco y de valor.
+
+\subsection{Contacto}
+\textbf{Función:} Página dedicada a facilitar la comunicación directa. Incluye formulario de contacto, correo profesional, redes sociales activas y una guía breve sobre cómo iniciar un proyecto con la artista. Es el punto de cierre del embudo de conversión del sitio.
+
+
+% ───────────────────────────────────────────────────────────────
+%  4. AUDIENCIA, COMPETENCIAS Y MODELO DE NEGOCIO
+% ───────────────────────────────────────────────────────────────
+\section{Audiencia o Público y Competencias}
+
+\subsection{Audiencia Principal}
+
+El sitio está dirigido a cuatro segmentos de público objetivo:
+
+\vspace{6pt}
+\begin{tabularx}{\textwidth}{L{3cm} L{3.5cm} X}
+\toprule
+\rowcolor{luluPurple!10}
+\textbf{Segmento} & \textbf{Perfil} & \textbf{Necesidad} \\
+\midrule
+Estudios de animación y producción & Directores creativos, productores & Artistas para proyectos de animación, storyboard o diseño de personajes \\
+\addlinespace
+Clientes independientes & Emprendedores, autores, creadores de contenido & Ilustraciones personalizadas, personajes para proyectos propios \\
+\addlinespace
+Desarrolladores de videojuegos & Indie devs y estudios pequeños & Assets visuales, concept art, sprites, modelado 3D \\
+\addlinespace
+Agencias y empresas & Directores de arte, marketers & Ilustración editorial, vectorizado, piezas para campañas publicitarias \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Competencias como Marca}
+
+\begin{itemize}
+  \item Dominio de múltiples disciplinas dentro del arte digital: ilustración, modelado 3D, animación, storyboard, creación de personajes y vectorizado.
+  \item Capacidad de adaptación de estilo según el tipo de proyecto y las necesidades del cliente.
+  \item Portafolio consolidado con proyectos variados y terminados listos para exhibir.
+  \item Proceso de trabajo transparente y colaborativo con el cliente desde el concepto hasta la entrega.
+\end{itemize}
+
+\subsection{Modelo de Negocio}
+
+El sitio generará ingresos a través de los siguientes mecanismos:
+
+\begin{description}
+  \item[\textbf{\color{luluPurple}1. Servicios freelance por proyecto}]
+  Comisiones directas de ilustración, animación, storyboard, modelado 3D, creación de personajes y vectorizado, cotizadas según alcance y complejidad de cada encargo.
+
+  \item[\textbf{\color{luluPurple}2. Paquetes de servicios}]
+  Conjuntos predefinidos de entregables a precio fijo, por ejemplo: \textit{Paquete de personaje} (diseño + turnaround + hoja de expresiones) o \textit{Paquete editorial} (ilustración + vectorizado + variantes de color).
+
+  \item[\textbf{\color{luluPurple}3. Licencias de uso de obra}]
+  Venta de licencias comerciales para el uso de piezas ya creadas del portafolio, especialmente ilustraciones y diseños de personajes originales.
+
+  \item[\textbf{\color{luluPurple}4. Contenido digital descargable} \normalfont\itshape (a futuro)]
+  Venta de brushes, texturas, fondos, o personajes base que otros artistas o desarrolladores puedan adquirir y utilizar en sus propios proyectos.
+\end{description}
+
+
+% ───────────────────────────────────────────────────────────────
+%  5. MAPA DEL SITIO
+% ───────────────────────────────────────────────────────────────
+\section{Mapa del Sitio}
+
+El diagrama representa la arquitectura de información del sitio en tres niveles: dominio, secciones principales y subsecciones de contenido.
+
+\vspace{12pt}
+
+\begin{center}
+\begin{tikzpicture}[
+  every node/.style={
+    draw, rounded corners=4pt,
+    font=\small, align=center,
+    inner sep=5pt
+  },
+  root/.style={
+    fill=luluPurple, text=white,
+    font=\small\bfseries,
+    minimum width=4.5cm, minimum height=0.7cm
+  },
+  main/.style={
+    fill=luluTeal!22, draw=luluTeal!70,
+    font=\small\bfseries,
+    minimum width=2.1cm, minimum height=0.65cm
+  },
+  sub/.style={
+    fill=gray!10, draw=gray!40,
+    font=\scriptsize,
+    minimum width=2cm, minimum height=0.55cm
+  },
+  arr/.style={-{Stealth[length=3.5pt]}, gray!55, line width=0.7pt}
+]
+
+% Raíz
+\node[root] (root) at (7, 11.5) {lulutapia.com};
+
+% Nodos principales (nivel 1)
+\node[main] (inicio)    at (1.1,  9.0) {Inicio};
+\node[main] (port)      at (3.8,  9.0) {Portafolio};
+\node[main] (serv)      at (6.5,  9.0) {Servicios};
+\node[main] (sobre)     at (9.2,  9.0) {Sobre mí};
+\node[main] (blog)      at (11.4, 9.0) {Blog};
+\node[main] (cont)      at (13.3, 9.0) {Contacto};
+
+% Flechas raíz → principales
+\foreach \n in {inicio, port, serv, sobre, blog, cont}
+  \draw[arr] (root) -- (\n);
+
+% Subnodos: Inicio
+\node[sub] (i1) at (1.1, 7.2) {Hero};
+\node[sub] (i2) at (1.1, 6.4) {Destacados};
+\node[sub] (i3) at (1.1, 5.6) {CTA};
+\draw[arr] (inicio) -- (i1);
+\draw[arr] (i1) -- (i2);
+\draw[arr] (i2) -- (i3);
+
+% Subnodos: Portafolio
+\node[sub] (p1) at (3.8, 7.2) {Ilustración};
+\node[sub] (p2) at (3.8, 6.4) {Modelado 3D};
+\node[sub] (p3) at (3.8, 5.6) {Animación};
+\node[sub] (p4) at (3.8, 4.8) {Personajes};
+\node[sub] (p5) at (3.8, 4.0) {Storyboard};
+\node[sub] (p6) at (3.8, 3.2) {Vectorizado};
+\draw[arr] (port) -- (p1);
+\draw[arr] (p1) -- (p2);
+\draw[arr] (p2) -- (p3);
+\draw[arr] (p3) -- (p4);
+\draw[arr] (p4) -- (p5);
+\draw[arr] (p5) -- (p6);
+
+% Subnodos: Servicios
+\node[sub] (s1) at (6.5, 7.2) {Lista de servicios};
+\node[sub] (s2) at (6.5, 6.4) {Descripción};
+\node[sub] (s3) at (6.5, 5.6) {Cotización};
+\draw[arr] (serv) -- (s1);
+\draw[arr] (s1) -- (s2);
+\draw[arr] (s2) -- (s3);
+
+% Subnodos: Sobre mí
+\node[sub] (sm1) at (9.2, 7.2) {Biografía};
+\node[sub] (sm2) at (9.2, 6.4) {Habilidades};
+\node[sub] (sm3) at (9.2, 5.6) {CV descargable};
+\draw[arr] (sobre) -- (sm1);
+\draw[arr] (sm1) -- (sm2);
+\draw[arr] (sm2) -- (sm3);
+
+% Subnodos: Blog
+\node[sub] (b1) at (11.4, 7.2) {Entradas};
+\node[sub] (b2) at (11.4, 6.4) {Proceso};
+\draw[arr] (blog) -- (b1);
+\draw[arr] (b1) -- (b2);
+
+% Subnodos: Contacto
+\node[sub] (c1) at (13.3, 7.2) {Formulario};
+\node[sub] (c2) at (13.3, 6.4) {Redes sociales};
+\draw[arr] (cont) -- (c1);
+\draw[arr] (c1) -- (c2);
+
+\end{tikzpicture}
+\end{center}
+
+
+% ───────────────────────────────────────────────────────────────
+%  6. DISEÑO DE NAVEGACIÓN POR CONTENIDOS
+% ───────────────────────────────────────────────────────────────
+\section{Diseño de Navegación por Contenidos}
+
+\subsection{Tipo de Navegación}
+
+Menú de navegación horizontal fijo en la parte superior (\textit{sticky navigation}), visible en todo momento durante el desplazamiento de la página.
+
+\subsection{Estructura de Navegación Principal}
+
+\begin{tcolorbox}[
+  colback=luluDark, colframe=luluDark,
+  arc=4pt, boxrule=0pt,
+  left=8pt, right=8pt, top=8pt, bottom=8pt
+]
+\centering
+{\small\bfseries\color{white}
+Inicio \quad\textbar\quad Portafolio \quad\textbar\quad Servicios \quad\textbar\quad Sobre mí \quad\textbar\quad Blog \quad\textbar\quad Contacto}
+\end{tcolorbox}
+
+\subsection{Navegación Secundaria}
+
+\begin{itemize}
+  \item \textbf{En Portafolio:} sistema de filtros por categoría (botones de selección) que permite explorar el trabajo sin abandonar la página.
+  \item \textbf{En Inicio:} botones CTA que dirigen al portafolio completo y a la sección de servicios.
+  \item \textbf{En footer:} accesos directos a todas las secciones principales y enlaces a redes sociales activas.
+\end{itemize}
+
+\subsection{Navegación en Dispositivos Móviles}
+
+Menú hamburguesa que despliega las opciones en formato vertical. El portafolio utilizará una cuadrícula adaptable (\textit{responsive grid}) de 1 a 3 columnas según el ancho de pantalla disponible.
+
+\subsection{Flujo Principal del Usuario}
+
+\vspace{8pt}
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.2cm,
+  box/.style={
+    draw, rounded corners=3pt,
+    fill=luluPurple!10, draw=luluPurple!50,
+    font=\small, inner sep=7pt,
+    minimum width=2.2cm, align=center
+  },
+  arrow/.style={-{Stealth[length=4pt]}, luluPurple!70, line width=0.9pt},
+  label/.style={font=\scriptsize, text=luluMidGray}
+]
+\node[box] (a) {Inicio};
+\node[box, right=of a] (b) {Portafolio};
+\node[box, right=of b] (c) {Servicios};
+\node[box, right=of c] (d) {Contacto};
+
+\node[label, below=0.2cm of a] {Impacto visual};
+\node[label, below=0.2cm of b] {Confianza};
+\node[label, below=0.2cm of c] {Interés};
+\node[label, below=0.2cm of d] {Conversión};
+
+\draw[arrow] (a) -- (b);
+\draw[arrow] (b) -- (c);
+\draw[arrow] (c) -- (d);
+\end{tikzpicture}
+\end{center}
+\vspace{4pt}
+
+
+% ───────────────────────────────────────────────────────────────
+%  7. DESCRIPCIÓN DEL ESTILO VISUAL
+% ───────────────────────────────────────────────────────────────
+\section{Descripción del Estilo Visual}
+
+El estilo visual es \textbf{colorido y expresivo}, alineado con la identidad artística de Lulú Tapia. El diseño parte de su propia obra: vivo, con carácter y fácil de recordar.
+
+\subsection{Paleta de Colores}
+
+\vspace{10pt}
+\begin{center}
+\begin{tikzpicture}
+  % Paleta actualizada — 6 colores, bloques con esquinas redondeadas
+  \fill[luluPurple,    rounded corners=4pt] (0.0,  0) rectangle (2.1, 1.9);
+  \fill[luluTeal,      rounded corners=4pt] (2.3,  0) rectangle (4.4, 1.9);
+  \fill[luluPink,      rounded corners=4pt] (4.6,  0) rectangle (6.7, 1.9);
+  \fill[luluLila,      rounded corners=4pt] (6.9,  0) rectangle (9.0, 1.9);
+  \fill[luluDark,      rounded corners=4pt] (9.2,  0) rectangle (11.3,1.9);
+  \fill[luluLightGray, rounded corners=4pt] (11.5, 0) rectangle (13.6,1.9);
+  \draw[gray!35,       rounded corners=4pt] (11.5, 0) rectangle (13.6,1.9);
+
+  \node[white,    font=\small\bfseries]        at (1.05,  1.35) {Púrpura};
+  \node[white,    font=\scriptsize\ttfamily]   at (1.05,  0.62) {\#6B3FA0};
+
+  \node[white,    font=\small\bfseries]        at (3.35,  1.35) {Turquesa};
+  \node[white,    font=\scriptsize\ttfamily]   at (3.35,  0.62) {\#2DC7C7};
+
+  \node[white,    font=\small\bfseries]        at (5.65,  1.35) {Rosa};
+  \node[white,    font=\scriptsize\ttfamily]   at (5.65,  0.62) {\#E91E8C};
+
+  \node[white,    font=\small\bfseries]        at (7.95,  1.35) {Lila};
+  \node[white,    font=\scriptsize\ttfamily]   at (7.95,  0.62) {\#C084FC};
+
+  \node[white,    font=\small\bfseries]        at (10.25, 1.35) {Oscuro};
+  \node[white,    font=\scriptsize\ttfamily]   at (10.25, 0.62) {\#1A1A2E};
+
+  \node[black!60, font=\small\bfseries]        at (12.55, 1.35) {Claro};
+  \node[black!50, font=\scriptsize\ttfamily]   at (12.55, 0.62) {\#F0F0F0};
+\end{tikzpicture}
+\end{center}
+\vspace{6pt}
+
+\subsection{Tipografía}
+
+\begin{itemize}
+  \item \textbf{Encabezados:} tipografía display con personalidad visual, como \textit{Playfair Display} o \textit{Abril Fatface}, para aportar expresividad a los títulos.
+  \item \textbf{Cuerpo de texto:} tipografía sans-serif limpia y legible, como \textit{DM Sans} o \textit{Inter}, para garantizar la lectura cómoda en todos los dispositivos.
+  \item El contraste entre titulares expresivos y texto funcional refuerza la jerarquía visual y guía la lectura.
+\end{itemize}
+
+\subsection{Elementos Visuales}
+
+\begin{itemize}
+  \item Transiciones suaves y animaciones de entrada en los elementos al hacer scroll (\textit{fade-in}).
+  \item Efectos \textit{hover} sobre las piezas del portafolio para revelar título y categoría del proyecto.
+  \item Uso de textura sutil en fondos para evitar la frialdad de superficies completamente planas.
+  \item Fotografía o autorretrato de la artista integrado en la sección ``Sobre mí'' para humanizar la marca.
+\end{itemize}
+
+\subsection{Tono General}
+
+Profesional pero cálido; creativo pero ordenado. El sitio debe sentirse como el estudio digital de un artista, no como un catálogo corporativo sin personalidad.
+
+
+% ───────────────────────────────────────────────────────────────
+%  8. SISTEMA DE ORGANIZACIÓN
+% ───────────────────────────────────────────────────────────────
+\section{Sistema de Organización}
+
+El contenido del sitio se organiza de forma \textbf{jerárquica, con categorización por tipo de medio o servicio}.
+
+\begin{description}
+  \item[\textbf{\color{luluPurple}Nivel 1 — Navegación principal}]
+  Las seis secciones del menú principal agrupan todo el contenido del sitio sin duplicidades. Cada sección tiene un propósito único y diferenciado dentro de la arquitectura de información.
+
+  \item[\textbf{\color{luluPurple}Nivel 2 — Subsecciones}]
+  Dentro del Portafolio, el contenido se organiza por disciplina artística (ilustración, 3D, animación, etc.). Dentro de Servicios, por tipo de entregable. Dentro del Blog, por fecha y categoría temática.
+
+  \item[\textbf{\color{luluPurple}Etiquetado y filtrado}]
+  Cada proyecto del portafolio lleva etiquetas de categoría, herramientas utilizadas y tipo de cliente, lo que facilita la búsqueda y el filtrado desde la interfaz sin necesidad de navegar a otra página.
+
+  \item[\textbf{\color{luluPurple}Principio rector}]
+  El usuario siempre debe poder ubicarse dentro del sitio y llegar a la sección de Contacto en \textbf{máximo tres clics} desde cualquier punto de la navegación.
+\end{description}
+
+
+% ───────────────────────────────────────────────────────────────
+%  9. WIREFRAMES
+% ───────────────────────────────────────────────────────────────
+\section{Wireframes}
+
+Los wireframes muestran la disposición de los elementos en las páginas principales, sin diseño visual definitivo ni paleta de color aplicada.
+
+% ┌──────────────────────────────────────────────────┐
+%  WIREFRAME 1 — HOME
+% └──────────────────────────────────────────────────┘
+\subsection{Wireframe 1 — Inicio (Home)}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.82, every node/.style={font=\scriptsize}]
+  % Marco general
+  \fill[gray!7] (0, 0) rectangle (14, 20);
+  \draw[gray!40, line width=1pt] (0, 0) rectangle (14, 20);
+
+  % Barra de dirección (simulada)
+  \fill[gray!18] (0, 19.4) rectangle (14, 20);
+  \node[gray!60] at (7, 19.7) {www.lulutapia.com};
+
+  % Barra de navegación
+  \fill[black!82] (0, 18.5) rectangle (14, 19.3);
+  \node[white, anchor=west, font=\scriptsize\bfseries] at (0.4, 18.9) {Lulú Tapia};
+  \node[white, font=\tiny] at (9.2, 18.9) {Inicio \;|\; Portafolio \;|\; Servicios \;|\; Sobre mí \;|\; Blog \;|\; Contacto};
+
+  % Hero
+  \fill[gray!12] (0, 13.2) rectangle (14, 18.4);
+  \fill[gray!30] (0.4, 13.5) rectangle (6.8, 18.1);
+  \node[gray!55] at (3.6, 15.8) {[ Imagen Hero ]};
+  \node[anchor=west, font=\normalsize\bfseries] at (7.2, 17.4) {LULÚ TAPIA};
+  \node[anchor=west, gray!65] at (7.2, 16.8) {Arte que cobra vida.};
+  \fill[black!72] (7.2, 15.6) rectangle (10.5, 16.3);
+  \node[white] at (8.85, 15.95) {Ver Portafolio};
+  \draw[black!72, line width=0.8pt] (10.8, 15.6) rectangle (13.5, 16.3);
+  \node[black!65] at (12.15, 15.95) {Contratar};
+
+  % Sección: Trabajos destacados
+  \node[anchor=west, font=\small\bfseries] at (0.4, 12.8) {Trabajos Destacados};
+  \draw[gray!25, line width=0.5pt] (0.4, 12.55) -- (13.6, 12.55);
+
+  \fill[gray!25] (0.4,  9.2) rectangle (3.8, 12.2);  \node[gray!55] at (2.1,  10.7) {Proyecto 1};
+  \fill[gray!25] (4.1,  9.2) rectangle (7.1, 12.2);  \node[gray!55] at (5.6,  10.7) {Proyecto 2};
+  \fill[gray!25] (7.4,  9.2) rectangle (10.4,12.2);  \node[gray!55] at (8.9,  10.7) {Proyecto 3};
+  \fill[gray!25] (10.7, 9.2) rectangle (13.6,12.2);  \node[gray!55] at (12.15,10.7) {Proyecto 4};
+
+  % CTA
+  \fill[gray!16] (0, 7.3) rectangle (14, 8.9);
+  \node[font=\small\bfseries] at (7, 8.45) {¿Tienes un proyecto en mente?};
+  \fill[black!68] (5.0, 7.5) rectangle (9.0, 8.1);
+  \node[white] at (7.0, 7.8) {Contáctame};
+
+  % Footer
+  \fill[black!82] (0, 0) rectangle (14, 3.5);
+  \node[white, font=\small\bfseries, anchor=west] at (0.5, 3.1) {Lulú Tapia};
+  \node[white, font=\tiny, anchor=west] at (0.5, 2.55) {Inicio \;|\; Portafolio \;|\; Servicios \;|\; Sobre mí \;|\; Blog \;|\; Contacto};
+  \node[white, font=\tiny, anchor=west] at (0.5, 2.05) {Instagram \;|\; Behance \;|\; ArtStation \;|\; Pinterest};
+  \node[white, font=\tiny, anchor=west] at (0.5, 1.5) {contacto@lulutapia.com};
+  \draw[gray!40, line width=0.4pt] (0.4, 0.75) -- (13.6, 0.75);
+  \node[gray!50, font=\tiny] at (7, 0.35) {© 2026 Lulú Tapia — Todos los derechos reservados};
+\end{tikzpicture}
+\end{center}
+
+% ┌──────────────────────────────────────────────────┐
+%  WIREFRAME 2 — PORTAFOLIO
+% └──────────────────────────────────────────────────┘
+\newpage
+\subsection{Wireframe 2 — Portafolio}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.82, every node/.style={font=\scriptsize}]
+  \fill[gray!7] (0, 0) rectangle (14, 20);
+  \draw[gray!40, line width=1pt] (0, 0) rectangle (14, 20);
+
+  \fill[gray!18] (0, 19.4) rectangle (14, 20);
+  \node[gray!60] at (7, 19.7) {www.lulutapia.com/portafolio};
+
+  \fill[black!82] (0, 18.5) rectangle (14, 19.3);
+  \node[white, anchor=west, font=\scriptsize\bfseries] at (0.4, 18.9) {Lulú Tapia};
+  \node[white, font=\tiny] at (9.2, 18.9) {Inicio \;|\; \underline{Portafolio} \;|\; Servicios \;|\; Sobre mí \;|\; Blog \;|\; Contacto};
+
+  \node[font=\large\bfseries] at (7, 17.9) {PORTAFOLIO};
+  \node[gray!60] at (7, 17.4) {Explora mi trabajo por categoría};
+
+  % Filtros — 7 botones
+  \foreach \idx/\lbl in {0/Todos, 1/Ilustración, 2/3D, 3/Animación, 4/Personajes, 5/Storyboard, 6/Vectorizado} {
+    \draw[gray!50, rounded corners=2pt]
+      ({0.3 + \idx * 1.94}, 16.0) rectangle ({2.1 + \idx * 1.94}, 16.7);
+    \node at ({1.2 + \idx * 1.94}, 16.35) {\lbl};
+  }
+
+  % Fila 1
+  \fill[gray!25] (0.4, 12.0) rectangle (4.8, 15.6);  \node[gray!55] at (2.6, 13.8) {Ilustración 01};
+  \fill[gray!25] (5.1, 12.0) rectangle (9.1, 15.6);  \node[gray!55] at (7.1, 13.8) {3D — Personaje};
+  \fill[gray!25] (9.4, 12.0) rectangle (13.6,15.6);  \node[gray!55] at (11.5,13.8) {Animación 01};
+
+  % Fila 2
+  \fill[gray!25] (0.4,  7.4) rectangle (4.8, 11.6);  \node[gray!55] at (2.6,  9.5) {Storyboard 01};
+  \fill[gray!25] (5.1,  7.4) rectangle (9.1, 11.6);  \node[gray!55] at (7.1,  9.5) {Personaje Sheet};
+  \fill[gray!25] (9.4,  7.4) rectangle (13.6,11.6);  \node[gray!55] at (11.5, 9.5) {Vectorizado 01};
+
+  \fill[black!82] (0, 0) rectangle (14, 3.5);
+  \node[white, font=\small\bfseries, anchor=west] at (0.5, 3.1) {Lulú Tapia};
+  \node[white, font=\tiny, anchor=west] at (0.5, 2.55) {Inicio \;|\; Portafolio \;|\; Servicios \;|\; Sobre mí \;|\; Blog \;|\; Contacto};
+  \node[white, font=\tiny, anchor=west] at (0.5, 2.05) {Instagram \;|\; Behance \;|\; ArtStation \;|\; Pinterest};
+  \node[white, font=\tiny, anchor=west] at (0.5, 1.5) {contacto@lulutapia.com};
+  \draw[gray!40, line width=0.4pt] (0.4, 0.75) -- (13.6, 0.75);
+  \node[gray!50, font=\tiny] at (7, 0.35) {© 2026 Lulú Tapia — Todos los derechos reservados};
+\end{tikzpicture}
+\end{center}
+
+% ┌──────────────────────────────────────────────────┐
+%  WIREFRAME 3 — SERVICIOS
+% └──────────────────────────────────────────────────┘
+\newpage
+\subsection{Wireframe 3 — Servicios}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.82, every node/.style={font=\scriptsize}]
+  \fill[gray!7] (0, 0) rectangle (14, 20);
+  \draw[gray!40, line width=1pt] (0, 0) rectangle (14, 20);
+
+  \fill[gray!18] (0, 19.4) rectangle (14, 20);
+  \node[gray!60] at (7, 19.7) {www.lulutapia.com/servicios};
+
+  \fill[black!82] (0, 18.5) rectangle (14, 19.3);
+  \node[white, anchor=west, font=\scriptsize\bfseries] at (0.4, 18.9) {Lulú Tapia};
+  \node[white, font=\tiny] at (9.2, 18.9) {Inicio \;|\; Portafolio \;|\; \underline{Servicios} \;|\; Sobre mí \;|\; Blog \;|\; Contacto};
+
+  \node[font=\large\bfseries] at (7, 17.9) {SERVICIOS};
+  \node[gray!60] at (7, 17.4) {¿Qué puedo hacer por ti?};
+
+  % Tarjeta: Ilustración
+  \fill[gray!13] (0.4, 13.6) rectangle (4.6, 17.0);
+  \fill[gray!28] (1.0, 15.7) rectangle (4.0, 16.7); \node[gray!55] at (2.5, 16.2) {[Ícono]};
+  \node[font=\small\bfseries] at (2.5, 15.35) {Ilustración};
+  \node[gray!60, font=\tiny] at (2.5, 14.8) {Ilustración digital a medida};
+  \fill[black!68] (1.3, 13.8) rectangle (3.7, 14.3); \node[white] at (2.5, 14.05) {Cotizar};
+
+  % Tarjeta: Modelado 3D
+  \fill[gray!13] (5.0, 13.6) rectangle (9.0, 17.0);
+  \fill[gray!28] (5.6, 15.7) rectangle (8.4, 16.7); \node[gray!55] at (7.0, 16.2) {[Ícono]};
+  \node[font=\small\bfseries] at (7.0, 15.35) {Modelado 3D};
+  \node[gray!60, font=\tiny] at (7.0, 14.8) {Modelado y render 3D};
+  \fill[black!68] (5.9, 13.8) rectangle (8.1, 14.3); \node[white] at (7.0, 14.05) {Cotizar};
+
+  % Tarjeta: Storyboard
+  \fill[gray!13] (9.6, 13.6) rectangle (13.6,17.0);
+  \fill[gray!28] (10.2,15.7) rectangle (13.0,16.7); \node[gray!55] at (11.6, 16.2) {[Ícono]};
+  \node[font=\small\bfseries] at (11.6, 15.35) {Storyboard};
+  \node[gray!60, font=\tiny] at (11.6, 14.8) {Guión gráfico para animación};
+  \fill[black!68] (10.5,13.8) rectangle (12.7,14.3); \node[white] at (11.6, 14.05) {Cotizar};
+
+  % Tarjeta: Animación
+  \fill[gray!13] (0.4,  9.4) rectangle (4.6, 13.2);
+  \fill[gray!28] (1.0, 11.5) rectangle (4.0, 12.9); \node[gray!55] at (2.5, 12.2) {[Ícono]};
+  \node[font=\small\bfseries] at (2.5, 11.15) {Animación};
+  \node[gray!60, font=\tiny] at (2.5, 10.55) {Animación 2D y motion graphics};
+  \fill[black!68] (1.3,  9.6) rectangle (3.7, 10.1); \node[white] at (2.5, 9.85) {Cotizar};
+
+  % Tarjeta: Creación de Personajes
+  \fill[gray!13] (5.0,  9.4) rectangle (9.0, 13.2);
+  \fill[gray!28] (5.6, 11.5) rectangle (8.4, 12.9); \node[gray!55] at (7.0, 12.2) {[Ícono]};
+  \node[font=\small\bfseries, align=center] at (7.0, 11.1) {Creación de\\Personajes};
+  \node[gray!60, font=\tiny] at (7.0, 10.55) {Diseño y hoja de personaje};
+  \fill[black!68] (5.9,  9.6) rectangle (8.1, 10.1); \node[white] at (7.0, 9.85) {Cotizar};
+
+  % Tarjeta: Vectorizado
+  \fill[gray!13] (9.6,  9.4) rectangle (13.6,13.2);
+  \fill[gray!28] (10.2,11.5) rectangle (13.0,12.9); \node[gray!55] at (11.6, 12.2) {[Ícono]};
+  \node[font=\small\bfseries] at (11.6, 11.15) {Vectorizado};
+  \node[gray!60, font=\tiny] at (11.6, 10.55) {Bocetos e imágenes a vector};
+  \fill[black!68] (10.5, 9.6) rectangle (12.7,10.1); \node[white] at (11.6, 9.85) {Cotizar};
+
+  \fill[black!82] (0, 0) rectangle (14, 3.5);
+  \node[white, font=\small\bfseries, anchor=west] at (0.5, 3.1) {Lulú Tapia};
+  \node[white, font=\tiny, anchor=west] at (0.5, 2.55) {Inicio \;|\; Portafolio \;|\; Servicios \;|\; Sobre mí \;|\; Blog \;|\; Contacto};
+  \node[white, font=\tiny, anchor=west] at (0.5, 2.05) {Instagram \;|\; Behance \;|\; ArtStation \;|\; Pinterest};
+  \node[white, font=\tiny, anchor=west] at (0.5, 1.5) {contacto@lulutapia.com};
+  \draw[gray!40, line width=0.4pt] (0.4, 0.75) -- (13.6, 0.75);
+  \node[gray!50, font=\tiny] at (7, 0.35) {© 2026 Lulú Tapia — Todos los derechos reservados};
+\end{tikzpicture}
+\end{center}
+
+% ┌──────────────────────────────────────────────────┐
+%  WIREFRAME 4 — CONTACTO
+% └──────────────────────────────────────────────────┘
+\newpage
+\subsection{Wireframe 4 — Contacto}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.82, every node/.style={font=\scriptsize}]
+  \fill[gray!7] (0, 0) rectangle (14, 20);
+  \draw[gray!40, line width=1pt] (0, 0) rectangle (14, 20);
+
+  \fill[gray!18] (0, 19.4) rectangle (14, 20);
+  \node[gray!60] at (7, 19.7) {www.lulutapia.com/contacto};
+
+  \fill[black!82] (0, 18.5) rectangle (14, 19.3);
+  \node[white, anchor=west, font=\scriptsize\bfseries] at (0.4, 18.9) {Lulú Tapia};
+  \node[white, font=\tiny] at (9.2, 18.9) {Inicio \;|\; Portafolio \;|\; Servicios \;|\; Sobre mí \;|\; Blog \;|\; \underline{Contacto}};
+
+  \node[font=\large\bfseries] at (7, 17.9) {CONTACTO};
+  \node[gray!60] at (7, 17.4) {Hablemos de tu proyecto};
+
+  % Columna izquierda: Formulario
+  % gap etiqueta→recuadro = 0.35 | gap recuadro→siguiente etiqueta = 0.35
+  \node[anchor=west, font=\small\bfseries] at (0.4, 16.8) {Formulario de contacto};
+
+  \node[anchor=west, gray!65] at (0.4, 16.00) {Nombre};
+  \fill[white] (0.4, 15.15) rectangle (6.8, 15.65);
+  \draw[gray!45, line width=0.5pt] (0.4, 15.15) rectangle (6.8, 15.65);
+
+  \node[anchor=west, gray!65] at (0.4, 14.80) {Correo electrónico};
+  \fill[white] (0.4, 13.95) rectangle (6.8, 14.45);
+  \draw[gray!45, line width=0.5pt] (0.4, 13.95) rectangle (6.8, 14.45);
+
+  \node[anchor=west, gray!65] at (0.4, 13.60) {Tipo de proyecto};
+  \fill[white] (0.4, 12.75) rectangle (6.8, 13.25);
+  \draw[gray!45, line width=0.5pt] (0.4, 12.75) rectangle (6.8, 13.25);
+
+  \node[anchor=west, gray!65] at (0.4, 12.40) {Mensaje};
+  \fill[white] (0.4, 10.05) rectangle (6.8, 12.05);
+  \draw[gray!45, line width=0.5pt] (0.4, 10.05) rectangle (6.8, 12.05);
+
+  \fill[black!75] (0.4, 9.05) rectangle (6.8, 9.70);
+  \node[white, font=\small] at (3.6, 9.38) {Enviar mensaje};
+
+  % Separador vertical
+  \draw[gray!25, dashed, line width=0.6pt] (7.1, 8.85) -- (7.1, 16.9);
+
+  % Columna derecha: Info de contacto
+  \node[anchor=west, font=\small\bfseries] at (7.5, 16.8) {Información de contacto};
+  \node[anchor=west, gray!65] at (7.5, 16.2) {contacto@lulutapia.com};
+  \node[anchor=west, gray!65] at (7.5, 15.7) {Disponible para proyectos remotos};
+  \node[anchor=west, gray!65] at (7.5, 15.2) {Respuesta en 24--48 horas};
+
+  \node[anchor=west, font=\small\bfseries] at (7.5, 14.7) {Redes sociales};
+
+  \foreach \sidx/\sname in {0/Instagram, 1/Behance, 2/ArtStation, 3/Pinterest} {
+    \draw[gray!45, rounded corners=2pt]
+      (7.5, {13.4 - \sidx * 0.85}) rectangle (13.5, {14.05 - \sidx * 0.85});
+    \node[anchor=west] at (7.8, {13.725 - \sidx * 0.85}) {\sname};
+  }
+
+  % Footer
+  \fill[black!82] (0, 0) rectangle (14, 3.5);
+  \node[white, font=\small\bfseries, anchor=west] at (0.5, 3.1) {Lulú Tapia};
+  \node[white, font=\tiny, anchor=west] at (0.5, 2.55) {Inicio \;|\; Portafolio \;|\; Servicios \;|\; Sobre mí \;|\; Blog \;|\; Contacto};
+  \node[white, font=\tiny, anchor=west] at (0.5, 2.05) {Instagram \;|\; Behance \;|\; ArtStation \;|\; Pinterest};
+  \node[white, font=\tiny, anchor=west] at (0.5, 1.5) {contacto@lulutapia.com};
+  \draw[gray!40, line width=0.4pt] (0.4, 0.75) -- (13.6, 0.75);
+  \node[gray!50, font=\tiny] at (7, 0.35) {© 2026 Lulú Tapia — Todos los derechos reservados};
+\end{tikzpicture}
+\end{center}
+
+
+% ───────────────────────────────────────────────────────────────
+%  10. CONCLUSIÓN
+% ───────────────────────────────────────────────────────────────
+\section{Conclusión}
+
+El sitio web de Lulú Tapia parte de una necesidad concreta: los artistas freelance requieren un espacio digital propio desde el que presentarse, mostrar su trabajo y generar oportunidades de negocio sin depender de plataformas externas.
+
+La planeación aquí desarrollada define una estructura funcional y visualmente coherente con la identidad artística de Lourdes del Ángel Vásquez Tapia. Cada sección tiene un propósito claro dentro del recorrido del usuario, y el conjunto del sitio atiende tanto objetivos de comunicación como de negocio.
+
+La elección del dominio \textbf{lulutapia.com}, la navegación directa, el portafolio organizado por disciplina y el modelo de servicios freelance con paquetes predefinidos conforman una propuesta viable y adaptada al perfil de la artista. Las fases de diseño visual e implementación técnica que siguen tomarán esta planeación como referencia.
+
+
+% ───────────────────────────────────────────────────────────────
+%  11. REFERENCIAS BIBLIOGRÁFICAS
+% ───────────────────────────────────────────────────────────────
+\section{Referencias Bibliográficas}
+
+\begin{thebibliography}{9}
+
+\bibitem{golombisky2017}
+Golombisky, K., y Hagen, R. (2017). \textit{White Space Is Not Your Enemy: A Beginner's Guide to Communicating Visually Through Graphic, Web \& Multimedia Design} (3a ed.). Focal Press.
+
+\bibitem{morville2006}
+Morville, P., y Rosenfeld, L. (2006). \textit{Information Architecture for the World Wide Web} (3a ed.). O'Reilly Media.
+
+\bibitem{nielsen2006}
+Nielsen, J., y Loranger, H. (2006). \textit{Prioritizing Web Usability}. New Riders.
+
+\bibitem{neumeier2006}
+Neumeier, M. (2006). \textit{The Brand Gap: How to Bridge the Distance Between Business Strategy and Design}. New Riders.
+
+\bibitem{clark2020}
+Clark, B. (2020). \textit{The content marketer's guide to personal branding}. Copyblogger. Recuperado de \url{https://copyblogger.com}
+
+\end{thebibliography}
+
+\end{document}
