@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPortfolioFilter();
   initContactForm();
   initNavHighlight();
+  initLightbox();
 });
 
 /* ──────────────────────────────────────────────────────
@@ -185,7 +186,55 @@ function validateForm(form) {
 }
 
 /* ──────────────────────────────────────────────────────
-   5. RESALTAR ENLACE ACTIVO EN NAVEGACIÓN (scroll spy)
+   5. LIGHTBOX — vista ampliada de piezas del portafolio
+────────────────────────────────────────────────────── */
+function initLightbox() {
+  const lightbox  = document.getElementById('lightbox');
+  const lbImg     = lightbox.querySelector('.lightbox__img');
+  const lbCat     = lightbox.querySelector('.lightbox__cat');
+  const lbName    = lightbox.querySelector('.lightbox__name');
+  const lbClose   = lightbox.querySelector('.lightbox__close');
+  const lbBackdrop = lightbox.querySelector('.lightbox__backdrop');
+
+  function openLightbox(card) {
+    const img  = card.querySelector('img');
+    const cat  = card.querySelector('.port-card__cat');
+    const name = card.querySelector('.port-card__name');
+
+    lbImg.src    = img.src;
+    lbImg.alt    = img.alt;
+    lbCat.textContent  = cat  ? cat.textContent  : '';
+    lbName.textContent = name ? name.textContent : '';
+
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  // Abrir al hacer clic en cualquier card del portafolio
+  document.querySelectorAll('.port-card').forEach(card => {
+    card.addEventListener('click', () => openLightbox(card));
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(card); }
+    });
+  });
+
+  // Cerrar
+  lbClose.addEventListener('click', closeLightbox);
+  lbBackdrop.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+  });
+}
+
+/* ──────────────────────────────────────────────────────
+   6. RESALTAR ENLACE ACTIVO EN NAVEGACIÓN (scroll spy)
 ────────────────────────────────────────────────────── */
 function initNavHighlight() {
   const sections = document.querySelectorAll('section[id]');
