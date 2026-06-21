@@ -72,12 +72,17 @@ El trabajo pertenece a una materia de diseño/desarrollo web. El profesor evalú
 ## Estructura del repositorio
 
 ```
-portfolioyuyu/
+lulutapia-web/
 ├── CLAUDE.md          ← este archivo
+├── README.md          ← contexto del proyecto
+├── AGENTS.md          ← orientación para agentes de IA
 ├── latex/             ← documentos de planeación (PDF académicos)
 │   ├── main.tex       ← Actividad 1: Propuesta del sitio web
-│   └── main.pdf       ← PDF compilado (15 páginas)
-├── frontend/          ← sitio web (implementación — fase futura)
+│   └── main.pdf       ← PDF compilado (14 páginas, entregado)
+├── pencil/            ← mockups de alta fidelidad (Actividad 2)
+│   ├── yuyu.pen       ← archivo Pencil con 6 frames (BINARIO CIFRADO)
+│   └── images/        ← imágenes exportadas de los mockups
+├── frontend/          ← sitio web (implementación — Actividad 3)
 └── backend/           ← servidor/API (fase futura, si aplica)
 ```
 
@@ -86,10 +91,10 @@ portfolioyuyu/
 ## Fases del proyecto
 
 ### ✅ COMPLETADO — Actividad 1: Planeación del Proyecto Web
-**Entregable:** PDF generado con LaTeX (`latex/main.pdf`)
+**Entregable:** PDF generado con LaTeX (`latex/main.pdf`, 14 páginas)
 
 Contenido del documento (en este orden exacto, como pide el escrito):
-1. Portada — con planteamiento, formato del entregable y URL tentativa
+1. Portada — materia: "Arquitectura de información y diseño", profesora: María Isela García Velázquez, institución: UNITEC
 2. Tema, mensaje, metas y objetivo
 3. Lista de secciones y sus funciones
 4. Audiencia o público y competencias + Modelo de negocio
@@ -97,36 +102,54 @@ Contenido del documento (en este orden exacto, como pide el escrito):
 6. Diseño de navegación por contenidos (con flujo de usuario)
 7. Descripción del estilo visual (paleta, tipografía, tono)
 8. Sistema de organización
-9. Wireframes (4 páginas: Home, Portafolio, Servicios, Contacto) — dibujados en TikZ
+9. Wireframes (4 páginas: Home, Portafolio, Servicios, Contacto) — dibujados en TikZ, escala 0.82
 10. Conclusión
 11. Referencias bibliográficas (formato APA)
 
 **Cómo compilar el PDF:**
 ```bash
-cd Documents/fullstack/portfolioyuyu/latex
+cd latex
 pdflatex -interaction=nonstopmode main.tex
-pdflatex -interaction=nonstopmode main.tex  # segunda pasada para TOC
+pdflatex -interaction=nonstopmode main.tex
 ```
 
-**Pendiente antes de entregar Actividad 1:**
-- Completar en `main.tex` los campos `[Nombre de la materia]`, `[Nombre del profesor(a)]`, `[Nombre de la institución]` en la portada.
+**Opciones activas en el .tex:** `tocdepth=1` (solo secciones principales), sin encabezados, solo número de página al pie.
 
 ---
 
-### ⏳ PENDIENTE — Actividad 2: Diseño Visual Formal
-**Objetivo:** Diseño visual detallado del sitio (mockups de alta fidelidad).
-- Herramienta probable: Figma (gratuito), Canva, Adobe XD u otra libre
-- Se basará en los wireframes y la identidad visual de la Actividad 1
-- Se espera que los diseños reflejen la paleta, tipografía y tono acordados
+### ✅ COMPLETADO — Actividad 2: Diseño Visual Formal (Mockups)
+**Entregable:** `pencil/yuyu.pen` — abierto con la extensión Pencil en VS Code (`highagency.pencildev`)
+
+6 frames de 1440px de ancho:
+
+| Frame | Alto |
+|---|---|
+| Home | 2400px |
+| Portafolio | 2250px |
+| Servicios | 2400px |
+| Sobre mí | 2200px |
+| Blog | 2750px |
+| Contacto | 2000px |
+
+**Estilo aplicado en los mockups:**
+- Fondo `#1A1A2E`, cards en `#2A1845`, secciones en `#221533`
+- Estética "maximalista artesanal": parches de color decorativos rotados, elementos tipo cinta adhesiva, confeti de puntos
+- Tipografía: **Baloo 2** para títulos (no Playfair/Abril como en el plan original), **Inter** para cuerpo
+
+**IMPORTANTE:** `yuyu.pen` es un archivo binario cifrado — acceder solo mediante herramientas MCP de Pencil (`highagency.pencildev`). Nunca abrir con `cat`, `Read` u otros lectores de texto.
 
 ---
 
 ### ⏳ PENDIENTE — Actividad 3: Implementación Frontend
 **Objetivo:** Construir el sitio web funcional en la carpeta `frontend/`.
-- Stack no definido aún — decidir con la usuaria según requisitos académicos y preferencias
-- Opciones probables: HTML/CSS/JS puro, Astro, Next.js, o framework libre
-- El sitio debe ser una página web real al final
-- Preferiblemente con hosting gratuito (GitHub Pages, Vercel, Netlify)
+- Stack a decidir: HTML/CSS/JS puro, Astro o Next.js según requisitos académicos
+- Hosting gratuito preferido: Vercel o Netlify (conectado a este repo de GitHub)
+
+**Requisitos del sitio:**
+- Diseño responsive (mobile-first) con menú hamburguesa en móvil
+- Galería filtrable en Portafolio (por categoría de servicio)
+- Formulario de contacto funcional
+- Animaciones fade-in al hacer scroll, efectos hover en portafolio
 
 ---
 
@@ -145,3 +168,16 @@ pdflatex -interaction=nonstopmode main.tex  # segunda pasada para TOC
 - Preferir soluciones limpias sobre parches encima de parches.
 - Para cambios en el `.tex`, siempre compilar dos veces para que el TOC se actualice.
 - El repositorio se subirá a GitHub — organizar los commits de forma coherente por actividad.
+- El apellido correcto es **Vásquez** (con s antes de z), no Vázquez.
+
+## Historial de decisiones relevantes
+
+| Decisión | Detalle |
+|---|---|
+| Paleta de color | Naranja original reemplazado por Rosa `#E91E8C` + Lila `#C084FC` |
+| Tema visual | Oscuro (`#1A1A2E`) como fondo principal |
+| Índice del PDF | `tocdepth=1` — solo secciones principales, sin subsecciones |
+| Encabezado del PDF | Eliminado — solo queda número de página al pie |
+| Wireframes | Dibujados en TikZ dentro del mismo `.tex`, escala 0.82 |
+| Mockups | Hechos en Pencil VS Code (`highagency.pencildev`), no en Figma |
+| Tipografía mockups | Baloo 2 para títulos (el plan original decía Playfair Display / Abril Fatface) |

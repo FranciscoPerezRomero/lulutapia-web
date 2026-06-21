@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lulú Tapia — Arte que cobra vida.</title>
+  <meta name="description" content="Portafolio de Lulú Tapia: ilustración digital, modelado 3D, animación, storyboard, diseño de personajes y vectorizado." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVEGACIÓN
+  ══════════════════════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+      <a href="#inicio" class="nav__logo" aria-label="Lulú Tapia — inicio">
+        <img src="img/logo-texto.png" alt="Lulú Tapia" class="nav__logo-img" />
+      </a>
+
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="#portafolio" class="nav__link">Portafolio</a></li>
+        <li><a href="#servicios" class="nav__link">Servicios</a></li>
+        <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+        <li><a href="#blog" class="nav__link">Blog</a></li>
+        <li><a href="#contacto" class="nav__link nav__link--cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         HERO — INICIO
+    ══════════════════════════════════════════ -->
+    <section id="inicio" class="hero">
+      <!-- Parches decorativos -->
+      <div class="patch patch--teal"  aria-hidden="true"></div>
+      <div class="patch patch--pink"  aria-hidden="true"></div>
+      <div class="patch patch--lilac" aria-hidden="true"></div>
+      <div class="dots-bg" aria-hidden="true"></div>
+
+      <div class="hero__content animate-in">
+
+        <!-- Columna izquierda: texto -->
+        <div class="hero__text">
+          <p class="hero__eyebrow">Diseño Multimedia Freelance</p>
+          <h1 class="hero__title">
+            <img src="img/logo.png" alt="Lulú Tapia" class="hero__logo-img" />
+          </h1>
+          <p class="hero__tagline">Arte que cobra vida.</p>
+          <p class="hero__desc">
+            Ilustración digital · Modelado 3D · Animación · Storyboard<br />
+            Diseño de personajes · Vectorizado
+          </p>
+          <div class="hero__actions">
+            <a href="#portafolio" class="btn btn--primary">Ver Portafolio</a>
+            <a href="#contacto" class="btn btn--outline">Contratar</a>
+          </div>
+        </div>
+
+        <!-- Columna derecha: collage de ilustraciones -->
+        <div class="hero__artwork" aria-hidden="true">
+          <img src="img/port-bruja.jpeg"   alt="" class="hero__art-img hero__art-img--back" />
+          <img src="img/port-cosmica.jpeg" alt="" class="hero__art-img hero__art-img--front" />
+        </div>
+
+      </div>
+
+      <!-- Trabajos destacados -->
+      <div class="hero__featured">
+        <h2 class="section-eyebrow animate-in">Trabajos Destacados</h2>
+        <div class="featured-grid animate-in">
+          <article class="featured-card" data-category="ilustracion">
+            <div class="featured-card__img">
+              <img src="img/port-powerpuff.jpeg" alt="Ilustración grupal estilo cartoon" loading="lazy" />
+              <span class="featured-card__cat">Ilustración</span>
+            </div>
+            <p class="featured-card__title">Ilustración grupal</p>
+          </article>
+          <article class="featured-card" data-category="personajes">
+            <div class="featured-card__img">
+              <img src="img/port-zombie.jpeg" alt="Diseño de personaje zombie" loading="lazy" />
+              <span class="featured-card__cat">Personajes</span>
+            </div>
+            <p class="featured-card__title">Zombie girl</p>
+          </article>
+          <article class="featured-card" data-category="ilustracion">
+            <div class="featured-card__img">
+              <img src="img/port-vampira.jpeg" alt="Ilustración de vampira en ataúd" loading="lazy" />
+              <span class="featured-card__cat">Ilustración</span>
+            </div>
+            <p class="featured-card__title">Vampira</p>
+          </article>
+          <article class="featured-card" data-category="personajes">
+            <div class="featured-card__img">
+              <img src="img/port-bruja.jpeg" alt="Diseño de personaje bruja" loading="lazy" />
+              <span class="featured-card__cat">Personajes</span>
+            </div>
+            <p class="featured-card__title">Bruja de Halloween</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- CTA secundario -->
+      <div class="cta-banner animate-in">
+        <p class="cta-banner__text">¿Tienes un proyecto en mente?</p>
+        <a href="#contacto" class="btn btn--primary">Contáctame</a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         PORTAFOLIO
+    ══════════════════════════════════════════ -->
+    <section id="portafolio" class="section section--alt">
+      <div class="patch patch--teal patch--right" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__header animate-in">
+          <h2 class="section__title">Portafolio</h2>
+          <p class="section__subtitle">Explora mi trabajo por categoría</p>
+        </header>
+
+        <!-- Filtros -->
+        <div class="filter-bar animate-in" role="group" aria-label="Filtrar por categoría">
+          <button class="filter-btn filter-btn--active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="ilustracion">Ilustración</button>
+          <button class="filter-btn" data-filter="personajes">Personajes</button>
+          <button class="filter-btn" data-filter="3d">Modelado 3D</button>
+          <button class="filter-btn" data-filter="storyboard">Storyboard</button>
+        </div>
+
+        <!-- Galería -->
+        <div class="portfolio-grid animate-in" id="portfolio-grid">
+
+          <article class="port-card" data-category="ilustracion">
+            <div class="port-card__img">
+              <img src="img/port-powerpuff.jpeg" alt="Ilustración grupal estilo cartoon colorido" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Ilustración</span>
+                <p class="port-card__name">Ilustración grupal</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="personajes">
+            <div class="port-card__img">
+              <img src="img/port-zombie.jpeg" alt="Diseño de personaje zombie kawaii con fondo oscuro" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Personajes</span>
+                <p class="port-card__name">Zombie girl</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="ilustracion">
+            <div class="port-card__img">
+              <img src="img/port-vampira.jpeg" alt="Vampira recostada en ataúd con murciélagos" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Ilustración</span>
+                <p class="port-card__name">Vampira</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="ilustracion">
+            <div class="port-card__img">
+              <img src="img/port-bunny.jpeg" alt="Personaje pin-up con orejas de conejo" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Ilustración</span>
+                <p class="port-card__name">Bunny girl</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="personajes">
+            <div class="port-card__img">
+              <img src="img/port-cosmica.jpeg" alt="Personaje cósmico con esfera de cristal" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Personajes</span>
+                <p class="port-card__name">Cosmica</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="personajes">
+            <div class="port-card__img">
+              <img src="img/port-demonia.jpeg" alt="Retrato de personaje demonio con cuernos y estrellas" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Personajes</span>
+                <p class="port-card__name">Demonia</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="personajes">
+            <div class="port-card__img">
+              <img src="img/port-bruja.jpeg" alt="Personaje bruja con bufanda serpiente volando" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Personajes</span>
+                <p class="port-card__name">Bruja de Halloween</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="storyboard">
+            <div class="port-card__img">
+              <img src="img/port-storyboard.jpeg" alt="Line art: niña trick-or-treat con calabaza" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Storyboard</span>
+                <p class="port-card__name">Trick or treat</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="ilustracion">
+            <div class="port-card__img">
+              <img src="img/port-fantasmas.jpeg" alt="Chica flotando rodeada de fantasmas" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Ilustración</span>
+                <p class="port-card__name">Ghost girl</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="3d">
+            <div class="port-card__img">
+              <img src="img/3d-criaturas.jpeg" alt="Renderizado 3D de trío de criaturas fantásticas" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Modelado 3D</span>
+                <p class="port-card__name">Trío de criaturas</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="3d">
+            <div class="port-card__img">
+              <img src="img/3d-bosque.jpeg" alt="Escena 3D de bosque low-poly con altar" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Modelado 3D</span>
+                <p class="port-card__name">Bosque y altar</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="3d">
+            <div class="port-card__img">
+              <img src="img/3d-cocina.jpeg" alt="Cocina cartoon estilo Simpsons en 3D" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Modelado 3D</span>
+                <p class="port-card__name">Cocina cartoon</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="port-card" data-category="3d">
+            <div class="port-card__img">
+              <img src="img/3d-casa.jpeg" alt="Interior de casa cartoon con sala y cocina en 3D" loading="lazy" />
+              <div class="port-card__overlay">
+                <span class="port-card__cat">Modelado 3D</span>
+                <p class="port-card__name">Interior de casa</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SERVICIOS
+    ══════════════════════════════════════════ -->
+    <section id="servicios" class="section">
+      <div class="patch patch--pink patch--left" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__header animate-in">
+          <h2 class="section__title">Servicios</h2>
+          <p class="section__subtitle">¿Qué puedo hacer por ti?</p>
+        </header>
+
+        <div class="services-grid animate-in">
+
+          <article class="service-card">
+            <div class="service-card__icon service-card__icon--purple" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Ilustración Digital</h3>
+            <p class="service-card__desc">Ilustraciones personalizadas a medida para editorial, publicidad, cuentos infantiles, merchandising y más.</p>
+            <a href="#contacto" class="btn btn--service">Cotizar</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon service-card__icon--teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Modelado 3D</h3>
+            <p class="service-card__desc">Modelado, texturizado y render de personajes, props y escenarios para videojuegos, animación o impresión 3D.</p>
+            <a href="#contacto" class="btn btn--service">Cotizar</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon service-card__icon--pink" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Storyboard</h3>
+            <p class="service-card__desc">Guión gráfico para animación, publicidad, videoclips o presentaciones; con descripciones de cámara y diálogos.</p>
+            <a href="#contacto" class="btn btn--service">Cotizar</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon service-card__icon--lilac" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Animación</h3>
+            <p class="service-card__desc">Animación 2D frame-by-frame, motion graphics y loops para redes sociales, apps y producciones audiovisuales.</p>
+            <a href="#contacto" class="btn btn--service">Cotizar</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon service-card__icon--purple" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Diseño de Personajes</h3>
+            <p class="service-card__desc">Creación de personajes originales con hoja de turnaround, expresiones, poses de acción y guía de color.</p>
+            <a href="#contacto" class="btn btn--service">Cotizar</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon service-card__icon--teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Vectorizado</h3>
+            <p class="service-card__desc">Conversión de bocetos, logos o imágenes rasterizadas a vectores SVG de alta calidad, listos para cualquier escala.</p>
+            <a href="#contacto" class="btn btn--service">Cotizar</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SOBRE MÍ
+    ══════════════════════════════════════════ -->
+    <section id="sobre-mi" class="section section--alt">
+      <div class="patch patch--lilac patch--right" aria-hidden="true"></div>
+      <div class="container">
+        <div class="about-grid animate-in">
+
+          <!-- Columna bio -->
+          <div class="about-bio">
+            <span class="section-eyebrow">Sobre mí</span>
+            <h2 class="about-bio__name">Lourdes del Ángel<br /><strong>Vásquez Tapia</strong></h2>
+            <p class="about-bio__intro">
+              Artista freelance especializada en arte digital, modelado 3D y animación. Con más de cinco años de experiencia creando mundos visuales para estudios, marcas y creadores independientes, mi trabajo combina técnica rigurosa con una visión narrativa propia.
+            </p>
+            <p class="about-bio__text">
+              Mi proceso parte siempre del concepto: entender qué historia quiere contar el cliente y cómo el arte puede amplificarla. Trabajo con empatía, iteración y comunicación constante para que cada entregable supere las expectativas.
+            </p>
+
+            <div class="skills">
+              <h3 class="skills__title">Herramientas</h3>
+              <div class="skills__list">
+                <span class="skill-tag">Procreate</span>
+                <span class="skill-tag">Clip Studio Paint</span>
+                <span class="skill-tag">Blender</span>
+                <span class="skill-tag">After Effects</span>
+                <span class="skill-tag">Illustrator</span>
+                <span class="skill-tag">Photoshop</span>
+                <span class="skill-tag">Toon Boom</span>
+                <span class="skill-tag">TVPaint</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proceso creativo -->
+          <div class="about-process">
+            <h3 class="about-process__title">Mi proceso creativo</h3>
+            <ol class="process-steps" role="list">
+              <li class="process-step">
+                <div class="process-step__num" aria-hidden="true">01</div>
+                <div>
+                  <strong class="process-step__name">Boceto</strong>
+                  <p class="process-step__desc">Rough inicial para validar composición y proporciones con el cliente.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <div class="process-step__num" aria-hidden="true">02</div>
+                <div>
+                  <strong class="process-step__name">Line Art</strong>
+                  <p class="process-step__desc">Limpieza y definición de líneas con peso variable y expresividad.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <div class="process-step__num" aria-hidden="true">03</div>
+                <div>
+                  <strong class="process-step__name">Color base</strong>
+                  <p class="process-step__desc">Aplicación de paleta cromática definida, sin luces ni sombras.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <div class="process-step__num" aria-hidden="true">04</div>
+                <div>
+                  <strong class="process-step__name">Iluminación</strong>
+                  <p class="process-step__desc">Sombras, highlights y fuentes de luz para dar volumen y profundidad.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <div class="process-step__num" aria-hidden="true">05</div>
+                <div>
+                  <strong class="process-step__name">Fondo y efectos</strong>
+                  <p class="process-step__desc">Ambiente, detalles y efectos de post-producción que integran la escena.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <div class="process-step__num" aria-hidden="true">06</div>
+                <div>
+                  <strong class="process-step__name">Render final</strong>
+                  <p class="process-step__desc">Exportación en los formatos requeridos por el cliente: PNG, SVG, MP4, etc.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         BLOG / PROCESO CREATIVO
+    ══════════════════════════════════════════ -->
+    <section id="blog" class="section">
+      <div class="dots-bg" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__header animate-in">
+          <h2 class="section__title">Blog</h2>
+          <p class="section__subtitle">Proceso creativo y reflexiones</p>
+        </header>
+
+        <div class="blog-grid animate-in">
+
+          <article class="blog-card">
+            <div class="blog-card__img blog-card__img--1" aria-hidden="true"></div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-05-10">10 mayo 2026</time>
+              <h3 class="blog-card__title">Cómo construyo un personaje desde cero</h3>
+              <p class="blog-card__excerpt">Del brief al render final: mi flujo de trabajo para diseño de personajes originales, con ejemplos reales de cada etapa.</p>
+              <a href="#" class="blog-card__link" aria-label="Leer: Cómo construyo un personaje desde cero">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__img blog-card__img--2" aria-hidden="true"></div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-04-22">22 abril 2026</time>
+              <h3 class="blog-card__title">Mis 5 herramientas esenciales para animación 2D</h3>
+              <p class="blog-card__excerpt">Comparativa honesta entre Clip Studio Paint, TVPaint, Toon Boom y After Effects según el tipo de proyecto.</p>
+              <a href="#" class="blog-card__link" aria-label="Leer: Mis 5 herramientas esenciales para animación 2D">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__img blog-card__img--3" aria-hidden="true"></div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-03-15">15 marzo 2026</time>
+              <h3 class="blog-card__title">De Blender a Procreate: combinando 3D e ilustración</h3>
+              <p class="blog-card__excerpt">Cómo uso renders 3D como base de perspectiva para ilustraciones digitales complejas sin perder el estilo propio.</p>
+              <a href="#" class="blog-card__link" aria-label="Leer: De Blender a Procreate: combinando 3D e ilustración">Leer más →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CONTACTO
+    ══════════════════════════════════════════ -->
+    <section id="contacto" class="section section--alt">
+      <div class="patch patch--pink patch--left" aria-hidden="true"></div>
+      <div class="patch patch--teal patch--right" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__header animate-in">
+          <h2 class="section__title">Contacto</h2>
+          <p class="section__subtitle">Hablemos de tu proyecto</p>
+        </header>
+
+        <div class="contact-grid animate-in">
+
+          <!-- Formulario -->
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="nombre" class="form-label">Nombre <span aria-hidden="true">*</span></label>
+              <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre completo" required autocomplete="name" />
+              <span class="form-error" id="nombre-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Correo electrónico <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="tu@correo.com" required autocomplete="email" />
+              <span class="form-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="tipo" class="form-label">Tipo de proyecto</label>
+              <select id="tipo" name="tipo" class="form-input form-select">
+                <option value="">Selecciona un servicio</option>
+                <option value="ilustracion">Ilustración digital</option>
+                <option value="3d">Modelado 3D</option>
+                <option value="storyboard">Storyboard</option>
+                <option value="animacion">Animación</option>
+                <option value="personajes">Diseño de personajes</option>
+                <option value="vectorizado">Vectorizado</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje" class="form-label">Mensaje <span aria-hidden="true">*</span></label>
+              <textarea id="mensaje" name="mensaje" class="form-input form-textarea" rows="5" placeholder="Cuéntame sobre tu proyecto: qué necesitas, para cuándo, referencias..." required></textarea>
+              <span class="form-error" id="mensaje-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+
+            <div class="form-success" id="form-success" aria-live="polite" hidden>
+              <span>✦</span> ¡Mensaje enviado! Te respondo en 24–48 horas.
+            </div>
+          </form>
+
+          <!-- Info de contacto -->
+          <aside class="contact-info">
+            <div class="contact-info__block">
+              <h3 class="contact-info__heading">Información</h3>
+              <p class="contact-info__item">
+                <span class="contact-info__icon" aria-hidden="true">✉</span>
+                contacto@lulutapia.com
+              </p>
+              <p class="contact-info__item">
+                <span class="contact-info__icon" aria-hidden="true">⏱</span>
+                Respuesta en 24–48 horas
+              </p>
+              <p class="contact-info__item">
+                <span class="contact-info__icon" aria-hidden="true">🌐</span>
+                Disponible para proyectos remotos
+              </p>
+            </div>
+
+            <div class="contact-info__block">
+              <h3 class="contact-info__heading">Redes sociales</h3>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="Instagram de Lulú Tapia">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                  Instagram
+                </a>
+                <a href="#" class="social-link" aria-label="Pinterest de Lulú Tapia">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.76 1.24-5.27 1.24-5.27s-.32-.63-.32-1.57c0-1.47.85-2.57 1.91-2.57.9 0 1.34.68 1.34 1.49 0 .91-.58 2.27-.88 3.53-.25 1.05.53 1.91 1.56 1.91 1.87 0 3.13-2.4 3.13-5.25 0-2.16-1.46-3.77-4.1-3.77-2.99 0-4.86 2.23-4.86 4.73 0 .86.25 1.46.64 1.93.18.22.21.3.14.56-.05.18-.16.62-.2.79-.07.26-.28.35-.51.26-1.4-.58-2.05-2.13-2.05-3.88 0-2.88 2.43-6.34 7.24-6.34 3.88 0 6.46 2.82 6.46 5.85 0 4-2.21 7-5.45 7-1.09 0-2.12-.59-2.47-1.26l-.67 2.56c-.24.93-.71 1.87-1.14 2.6.86.27 1.77.41 2.71.41 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                  Pinterest
+                </a>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="img/logo-texto.png" alt="Lulú Tapia" class="footer__logo-img" />
+          <p class="footer__tagline">Arte que cobra vida.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+          <ul role="list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__social">
+          <p class="footer__social-title">Sígueme</p>
+          <div class="footer__social-links">
+            <a href="#" aria-label="Instagram">Ig</a>
+            <a href="#" aria-label="Pinterest">Pt</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Lulú Tapia — Todos los derechos reservados</p>
+        <p>contacto@lulutapia.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

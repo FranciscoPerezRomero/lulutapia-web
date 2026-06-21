@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[12pt, letterpaper]{article}
 
 % ═══════════════════════════════════════════════════════════════
 %  PAQUETES
@@ -6,7 +6,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
-\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm,
+            headheight=1.25cm, footskip=1.25cm]{geometry}
 
 % Colores
 \usepackage[dvipsnames, table]{xcolor}
@@ -23,10 +24,21 @@
 \usepackage{lmodern}
 \usepackage{microtype}
 
+% Interlineado y espaciado
+\usepackage{setspace}
+\setstretch{1.15}
+\setlength{\parskip}{0pt plus 1pt}
+\setlength{\parindent}{0pt}
+
 % Gráficos y diagramas
 \usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{shapes, arrows.meta, positioning, fit, calc}
+
+% Figuras
+\usepackage{float}
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf, labelsep=period, skip=6pt}
 
 % Tablas
 \usepackage{tabularx}
@@ -39,10 +51,6 @@
 \setlist[itemize]{leftmargin=*, topsep=3pt, itemsep=2pt, parsep=0pt}
 \setlist[enumerate]{leftmargin=*, topsep=3pt, itemsep=2pt, parsep=0pt}
 \setlist[description]{leftmargin=0pt, style=nextline, topsep=4pt, itemsep=6pt}
-
-% Espaciado entre párrafos
-\usepackage{parskip}
-\setlength{\parskip}{5pt}
 
 % Índice compacto (solo secciones principales)
 \usepackage{tocloft}
@@ -107,16 +115,18 @@
 
 \vspace{0.4cm}
 
-{\large Actividad 1 — Planeación del Proyecto Web}
+{\large Diseño de Proyecto — Planeación y Desarrollo Web}
 
 \vspace{2.2cm}
 
 \begin{tabular}{rl}
-  \textbf{Alumna:}       & Lourdes del Ángel Vásquez Tapia \\[7pt]
-  \textbf{Materia:}      & Arquitectura de información y diseño  \\[7pt]
-  \textbf{Profesor(a):}  & María Isela García Velázquez       \\[7pt]
-  \textbf{Institución:}  & Universidad Tecnológica de México (UNITEC)     \\[7pt]
-  \textbf{Fecha:}        & Junio de 2026                    \\
+  \textbf{Alumna:}             & Lourdes del Ángel Vásquez Tapia \\[7pt]
+  \textbf{Plan de estudios:}   & Maestría en Diseño Multimedia \\[7pt]
+  \textbf{Materia:}            & Arquitectura de información y diseño  \\[7pt]
+  \textbf{Profesor(a):}        & María Isela García Velázquez       \\[7pt]
+  \textbf{Institución:}        & Universidad Tecnológica de México (UNITEC)     \\[7pt]
+  \textbf{Ciclo escolar:}      & Enero--Junio 2026 \\[7pt]
+  \textbf{Fecha de entrega:}   & Junio de 2026                    \\
 \end{tabular}
 
 \vfill
@@ -141,6 +151,38 @@
 
 
 % ───────────────────────────────────────────────────────────────
+%  RESUMEN EJECUTIVO
+% ───────────────────────────────────────────────────────────────
+\section*{Resumen Ejecutivo}
+\addcontentsline{toc}{section}{Resumen Ejecutivo}
+
+El presente documento constituye la propuesta integral de diseño y desarrollo del sitio web personal de \textbf{Lourdes del Ángel Vásquez Tapia}, artista freelance conocida profesionalmente como \textbf{Lulú Tapia}.
+
+\textbf{Caso multimedia a solucionar:} Los artistas freelance del sector creativo digital enfrentan la problemática de no contar con un espacio propio que centralice su identidad de marca, portafolio y canal de contacto con clientes. La dependencia de plataformas externas (Behance, Instagram, ArtStation) fragmenta la presencia digital y limita el control sobre la experiencia del visitante y la captación de clientes potenciales.
+
+\textbf{Metodología utilizada:} El proyecto adopta el marco de \textit{Diseño Centrado en el Usuario} (DCU) propuesto por Garrett~(2011), que estructura el desarrollo en cinco capas progresivas: estrategia, alcance, estructura, esqueleto y superficie visual. De forma complementaria, se integra el proceso de \textit{Design Thinking} de IDEO~(2015) para validar las necesidades reales del usuario en las etapas de empatía y definición.
+
+\textbf{Contexto de desarrollo:} El proyecto se desarrolla en el ámbito académico de la Maestría en Diseño Multimedia de la UNITEC, con aplicación práctica real al contexto profesional de la artista. El sitio está destinado a operar en el mercado de servicios creativos digitales hispanohablante e internacional.
+
+\textbf{Producto/solución:} Sitio web estático de una sola página con seis secciones interactivas (Inicio, Portafolio, Servicios, Sobre mí, Blog y Contacto), desarrollado en HTML5, CSS3 y JavaScript. El sitio puede consultarse en: \url{https://lulutapia.vercel.app}
+
+\textbf{Características multimedia del diseño final:}
+\begin{itemize}
+  \item Interfaz web responsiva con tema visual oscuro (\texttt{\#1A1A2E}) y paleta cromática de alta saturación
+  \item Galería de portafolio filtrable por categoría artística mediante JavaScript
+  \item Animaciones de entrada al scroll con \texttt{IntersectionObserver}
+  \item Efectos \textit{hover} interactivos sobre tarjetas de portafolio y servicios
+  \item Formulario de contacto funcional con validación del lado del cliente
+  \item Navegación responsiva con menú hamburguesa para dispositivos móviles
+
+\end{itemize}
+
+\textbf{Áreas de diseño multimedia favorecidas:} El proyecto beneficia principalmente las áreas de \textit{diseño de experiencia de usuario} (UX), \textit{diseño de interfaces} (UI), \textit{diseño gráfico digital} y \textit{comunicación visual}. Los hallazgos durante el desarrollo confirman que la jerarquía tipográfica y la paleta cromática cohesionada son determinantes en la percepción de profesionalismo de una marca personal creativa.
+
+\newpage
+
+
+% ───────────────────────────────────────────────────────────────
 %  1. PLANTEAMIENTO DEL PROYECTO
 % ───────────────────────────────────────────────────────────────
 \section{Planteamiento del Proyecto del Sitio Web}
@@ -151,9 +193,7 @@ El sitio busca consolidar una identidad digital propia que sirva al mismo tiempo
 
 \subsection{Formato del Documento o Entregable}
 
-Este entregable corresponde a la \textbf{Fase 1 de planeación del proyecto web}, presentado en formato \textbf{PDF}. Abarca los elementos de arquitectura de información: objetivos, definición de audiencia, modelo de negocio, mapa del sitio, sistema de navegación, estilo visual, sistema de organización y wireframes de las páginas principales.
-
-No incluye código fuente, implementación visual definitiva ni activos gráficos finales, los cuales corresponden a fases posteriores del proyecto.
+Este entregable corresponde al \textbf{Diseño de Proyecto web}, presentado en formato \textbf{PDF}. Abarca los elementos de arquitectura de información: objetivos, definición de audiencia, modelo de negocio, mapa del sitio, sistema de navegación, estilo visual, sistema de organización y wireframes de las páginas principales. El documento se complementa con la implementación funcional del sitio web, accesible mediante la liga virtual incluida en la sección de Conclusión.
 
 \subsection{Tentativo URL del Sitio}
 
@@ -169,6 +209,16 @@ No incluye código fuente, implementación visual definitiva ni activos gráfico
 
 Se prefiere el dominio \texttt{.com} por su universalidad y reconocimiento global. El dominio \texttt{.art} se considera alternativa válida dado que fue creado específicamente para el sector creativo y artístico. En ambos casos, el nombre es corto, memorable y coincide directamente con el nombre de marca.
 
+\subsection{Metodología de Diseño}
+
+El desarrollo del sitio web de Lulú Tapia se fundamenta en la integración de dos metodologías ampliamente reconocidas en el campo del diseño de experiencias digitales:
+
+\textbf{1. The Elements of User Experience — Jesse James Garrett (2011):} Garrett propone un modelo de cinco planos para el diseño de experiencias web: \textit{estrategia} (objetivos del sitio y necesidades del usuario), \textit{alcance} (funciones y contenido), \textit{estructura} (arquitectura de información), \textit{esqueleto} (diseño de interfaz y navegación) y \textit{superficie} (diseño visual). Este marco rige el presente documento: cada sección corresponde a un plano diferente de la metodología, desde los objetivos (§\,2) hasta los wireframes (§\,9) y el estilo visual (§\,7). Garrett~(2011) subraya que ``la experiencia de usuario no ocurre por accidente; es el resultado de decisiones deliberadas y sistemáticas'' (p. 17), principio rector de este proyecto.
+
+\textbf{2. Diseño Centrado en el Usuario — IDEO / Human-Centered Design (2015):} El proceso de IDEO estructura el diseño en tres fases: \textit{inspiración} (comprensión del contexto y las personas), \textit{ideación} (generación de soluciones) e \textit{implementación} (prototipado y entrega). La fase de inspiración se materializó en el análisis de audiencia (§\,4); la ideación, en la definición de secciones, mapa del sitio y sistema de navegación (§§\,3, 5, 6); y la implementación, en los wireframes de alta y baja fidelidad y el desarrollo del sitio web funcional.
+
+La integración de ambas metodologías permite un proceso riguroso: la metodología de Garrett garantiza la coherencia estructural del producto, mientras que el enfoque de IDEO asegura que las decisiones de diseño respondan a necesidades reales y verificadas del usuario final (Norman, 2013).
+
 
 % ───────────────────────────────────────────────────────────────
 %  2. TEMA, MENSAJE, METAS Y OBJETIVO
@@ -177,7 +227,7 @@ Se prefiere el dominio \texttt{.com} por su universalidad y reconocimiento globa
 
 \subsection{Tema}
 
-El tema central del sitio es la \textbf{identidad artística y capacidad profesional de Lulú Tapia} como creadora multimedia. El sitio no es únicamente un portafolio, sino una experiencia visual que comunica el estilo, la versatilidad y la calidad del trabajo de la artista. El hilo conductor es el arte como puente entre la imaginación y la comunicación visual.
+El tema central del sitio es la \textbf{identidad artística y capacidad profesional de Lulú Tapia} como creadora multimedia. El sitio no es únicamente un portafolio, sino una experiencia visual que comunica el estilo, la versatilidad y la calidad del trabajo de la artista. El hilo conductor es el arte como puente entre la imaginación y la comunicación visual (Lupton, 2017).
 
 \subsection{Mensaje Central}
 
@@ -204,7 +254,7 @@ Este mensaje resume la propuesta de valor de Lulú Tapia: su capacidad para llev
 
 \subsection{Objetivo}
 
-El sitio web funcionará como plataforma de presentación, captación de clientes y monetización de los servicios artísticos de Lulú Tapia; un punto de contacto directo entre la artista y quienes buscan sus servicios.
+El sitio web funcionará como plataforma de presentación, captación de clientes y monetización de los servicios artísticos de Lulú Tapia; un punto de contacto directo entre la artista y quienes buscan sus servicios. Según Neumeier~(2006), ``una marca no es lo que tú dices que es; es lo que ellos dicen que es'' (p. 2), por lo que el diseño del sitio prioriza la percepción del cliente sobre la perspectiva interna.
 
 
 % ───────────────────────────────────────────────────────────────
@@ -226,7 +276,7 @@ El sitio se estructura en \textbf{seis secciones}, cada una con un rol definido 
 \textbf{Función:} Primera impresión visual del visitante. Contiene un encabezado impactante con el nombre de marca, tagline y una selección destacada del portafolio. Incluye llamados a la acción (CTA) directos hacia el portafolio y los servicios. Es la sección que define el tono visual y narrativo de todo el sitio, y el punto de entrada principal del embudo de conversión.
 
 \subsection{Portafolio}
-\textbf{Función:} Galería principal de trabajos organizados por categoría. Permite al visitante explorar el trabajo de Lulú Tapia por disciplina: ilustración, modelado 3D, storyboard, animación, creación de personajes y vectorizado. Cada proyecto puede incluir descripción, herramientas utilizadas y referencias del proceso creativo. Es la sección más importante para generar confianza y convertir visitantes en clientes.
+\textbf{Función:} Galería principal de trabajos organizados por categoría. Permite al visitante explorar el trabajo de Lulú Tapia por disciplina: ilustración, modelado 3D, storyboard, animación, creación de personajes y vectorizado. Cada proyecto puede incluir descripción, herramientas utilizadas y referencias del proceso creativo. Es la sección más importante para generar confianza y convertir visitantes en clientes. Nielsen y Loranger~(2006) señalan que la organización visual del contenido es el factor más relevante en la confianza inicial del usuario hacia un portafolio profesional.
 
 \subsection{Servicios}
 \textbf{Función:} Descripción clara y detallada de cada servicio ofrecido, incluyendo qué contempla cada uno, tiempos de entrega estimados y forma de solicitar una cotización. Funciona como carta de ventas directa y elimina la fricción en el proceso de contratación al responder las preguntas más comunes del cliente.
@@ -238,7 +288,7 @@ El sitio se estructura en \textbf{seis secciones}, cada una con un rol definido 
 \textbf{Función:} Espacio donde Lulú Tapia comparte avances de proyectos, reflexiones sobre su proceso artístico y novedades. Posiciona a la artista como autoridad en su campo, mejora el posicionamiento SEO del sitio y fomenta el retorno de visitantes a través de contenido fresco y de valor.
 
 \subsection{Contacto}
-\textbf{Función:} Página dedicada a facilitar la comunicación directa. Incluye formulario de contacto, correo profesional, redes sociales activas y una guía breve sobre cómo iniciar un proyecto con la artista. Es el punto de cierre del embudo de conversión del sitio.
+\textbf{Función:} Página dedicada a facilitar la comunicación directa. Incluye formulario de contacto, correo profesional, redes sociales activas y una guía breve sobre cómo iniciar un proyecto con la artista. Es el punto de cierre del embudo de conversión del sitio. Krug~(2014) establece que el camino hacia la acción debe ser intuitivo y requerir el mínimo de pasos posibles.
 
 
 % ───────────────────────────────────────────────────────────────
@@ -303,7 +353,8 @@ El diagrama representa la arquitectura de información del sitio en tres niveles
 
 \vspace{12pt}
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}[
   every node/.style={
     draw, rounded corners=4pt,
@@ -394,7 +445,9 @@ El diagrama representa la arquitectura de información del sitio en tres niveles
 \draw[arr] (c1) -- (c2);
 
 \end{tikzpicture}
-\end{center}
+\caption{Mapa del sitio de lulutapia.com — arquitectura de información en tres niveles jerárquicos.}
+\label{fig:mapa-sitio}
+\end{figure}
 
 
 % ───────────────────────────────────────────────────────────────
@@ -404,7 +457,7 @@ El diagrama representa la arquitectura de información del sitio en tres niveles
 
 \subsection{Tipo de Navegación}
 
-Menú de navegación horizontal fijo en la parte superior (\textit{sticky navigation}), visible en todo momento durante el desplazamiento de la página.
+Menú de navegación horizontal fijo en la parte superior (\textit{sticky navigation}), visible en todo momento durante el desplazamiento de la página. Morville y Rosenfeld~(2006) señalan que la navegación persistente reduce la carga cognitiva del usuario al proporcionar un punto de referencia constante sobre la posición dentro del sitio.
 
 \subsection{Estructura de Navegación Principal}
 
@@ -433,7 +486,8 @@ Menú hamburguesa que despliega las opciones en formato vertical. El portafolio 
 \subsection{Flujo Principal del Usuario}
 
 \vspace{8pt}
-\begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}[
   node distance=1.2cm,
   box/.style={
@@ -459,7 +513,9 @@ Menú hamburguesa que despliega las opciones en formato vertical. El portafolio 
 \draw[arrow] (b) -- (c);
 \draw[arrow] (c) -- (d);
 \end{tikzpicture}
-\end{center}
+\caption{Flujo principal del usuario: embudo de conversión de cuatro etapas desde el primer contacto hasta la acción de contratar.}
+\label{fig:flujo-usuario}
+\end{figure}
 \vspace{4pt}
 
 
@@ -468,14 +524,14 @@ Menú hamburguesa que despliega las opciones en formato vertical. El portafolio 
 % ───────────────────────────────────────────────────────────────
 \section{Descripción del Estilo Visual}
 
-El estilo visual es \textbf{colorido y expresivo}, alineado con la identidad artística de Lulú Tapia. El diseño parte de su propia obra: vivo, con carácter y fácil de recordar.
+El estilo visual es \textbf{colorido y expresivo}, alineado con la identidad artística de Lulú Tapia. El diseño parte de su propia obra: vivo, con carácter y fácil de recordar. Golombisky y Hagen~(2017) afirman que ``el color es la primera impresión que el ojo percibe y la más difícil de corregir una vez establecida'' (p. 112), razón por la cual la definición de paleta fue el primer paso de la fase de diseño.
 
 \subsection{Paleta de Colores}
 
 \vspace{10pt}
-\begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}
-  % Paleta actualizada — 6 colores, bloques con esquinas redondeadas
   \fill[luluPurple,    rounded corners=4pt] (0.0,  0) rectangle (2.1, 1.9);
   \fill[luluTeal,      rounded corners=4pt] (2.3,  0) rectangle (4.4, 1.9);
   \fill[luluPink,      rounded corners=4pt] (4.6,  0) rectangle (6.7, 1.9);
@@ -502,24 +558,27 @@ El estilo visual es \textbf{colorido y expresivo}, alineado con la identidad art
   \node[black!60, font=\small\bfseries]        at (12.55, 1.35) {Claro};
   \node[black!50, font=\scriptsize\ttfamily]   at (12.55, 0.62) {\#F0F0F0};
 \end{tikzpicture}
-\end{center}
+\caption{Paleta cromática de Lulú Tapia: seis tonos que definen la identidad visual del sitio.}
+\label{fig:paleta}
+\end{figure}
 \vspace{6pt}
 
 \subsection{Tipografía}
 
 \begin{itemize}
-  \item \textbf{Encabezados:} tipografía display con personalidad visual, como \textit{Playfair Display} o \textit{Abril Fatface}, para aportar expresividad a los títulos.
-  \item \textbf{Cuerpo de texto:} tipografía sans-serif limpia y legible, como \textit{DM Sans} o \textit{Inter}, para garantizar la lectura cómoda en todos los dispositivos.
-  \item El contraste entre titulares expresivos y texto funcional refuerza la jerarquía visual y guía la lectura.
+  \item \textbf{Encabezados:} \textit{Baloo~2}, tipografía display de trazo amigable y expresivo, que aporta calidez y personalidad a los títulos sin sacrificar legibilidad.
+  \item \textbf{Cuerpo de texto:} \textit{Inter}, tipografía sans-serif diseñada específicamente para pantallas, garantiza la lectura cómoda en todos los dispositivos y tamaños.
+  \item El contraste entre titulares expresivos y texto funcional refuerza la jerarquía visual y guía la lectura (Lupton, 2017).
 \end{itemize}
 
 \subsection{Elementos Visuales}
 
 \begin{itemize}
+  \item Tema oscuro con fondo \texttt{\#1A1A2E} y tarjetas en \texttt{\#2A1845} / \texttt{\#221533}.
+  \item Parches de color decorativos (rotados entre 5° y 15°) en tonos turquesa, rosa y lila distribuidos en fondos de sección.
+  \item Confeti de puntos generado con gradientes CSS como textura de fondo sutil.
   \item Transiciones suaves y animaciones de entrada en los elementos al hacer scroll (\textit{fade-in}).
   \item Efectos \textit{hover} sobre las piezas del portafolio para revelar título y categoría del proyecto.
-  \item Uso de textura sutil en fondos para evitar la frialdad de superficies completamente planas.
-  \item Fotografía o autorretrato de la artista integrado en la sección ``Sobre mí'' para humanizar la marca.
 \end{itemize}
 
 \subsection{Tono General}
@@ -536,7 +595,7 @@ El contenido del sitio se organiza de forma \textbf{jerárquica, con categorizac
 
 \begin{description}
   \item[\textbf{\color{luluPurple}Nivel 1 — Navegación principal}]
-  Las seis secciones del menú principal agrupan todo el contenido del sitio sin duplicidades. Cada sección tiene un propósito único y diferenciado dentro de la arquitectura de información.
+  Las seis secciones del menú principal agrupan todo el contenido del sitio sin duplicidades. Cada sección tiene un propósito único y diferenciado dentro de la arquitectura de información (Morville y Rosenfeld, 2006).
 
   \item[\textbf{\color{luluPurple}Nivel 2 — Subsecciones}]
   Dentro del Portafolio, el contenido se organiza por disciplina artística (ilustración, 3D, animación, etc.). Dentro de Servicios, por tipo de entregable. Dentro del Blog, por fecha y categoría temática.
@@ -545,7 +604,7 @@ El contenido del sitio se organiza de forma \textbf{jerárquica, con categorizac
   Cada proyecto del portafolio lleva etiquetas de categoría, herramientas utilizadas y tipo de cliente, lo que facilita la búsqueda y el filtrado desde la interfaz sin necesidad de navegar a otra página.
 
   \item[\textbf{\color{luluPurple}Principio rector}]
-  El usuario siempre debe poder ubicarse dentro del sitio y llegar a la sección de Contacto en \textbf{máximo tres clics} desde cualquier punto de la navegación.
+  El usuario siempre debe poder ubicarse dentro del sitio y llegar a la sección de Contacto en \textbf{máximo tres clics} desde cualquier punto de la navegación (Krug, 2014).
 \end{description}
 
 
@@ -554,14 +613,15 @@ El contenido del sitio se organiza de forma \textbf{jerárquica, con categorizac
 % ───────────────────────────────────────────────────────────────
 \section{Wireframes}
 
-Los wireframes muestran la disposición de los elementos en las páginas principales, sin diseño visual definitivo ni paleta de color aplicada.
+Los wireframes muestran la disposición de los elementos en las páginas principales, sin diseño visual definitivo ni paleta de color aplicada. Constituyen la capa de \textit{esqueleto} del modelo de Garrett~(2011), donde se define la distribución de componentes de interfaz y navegación antes de aplicar el diseño superficial.
 
 % ┌──────────────────────────────────────────────────┐
 %  WIREFRAME 1 — HOME
 % └──────────────────────────────────────────────────┘
 \subsection{Wireframe 1 — Inicio (Home)}
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}[scale=0.82, every node/.style={font=\scriptsize}]
   % Marco general
   \fill[gray!7] (0, 0) rectangle (14, 20);
@@ -611,7 +671,9 @@ Los wireframes muestran la disposición de los elementos en las páginas princip
   \draw[gray!40, line width=0.4pt] (0.4, 0.75) -- (13.6, 0.75);
   \node[gray!50, font=\tiny] at (7, 0.35) {© 2026 Lulú Tapia — Todos los derechos reservados};
 \end{tikzpicture}
-\end{center}
+\caption{Wireframe 1 — Inicio (Home): disposición de hero, trabajos destacados, CTA y footer.}
+\label{fig:wf-home}
+\end{figure}
 
 % ┌──────────────────────────────────────────────────┐
 %  WIREFRAME 2 — PORTAFOLIO
@@ -619,7 +681,8 @@ Los wireframes muestran la disposición de los elementos en las páginas princip
 \newpage
 \subsection{Wireframe 2 — Portafolio}
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}[scale=0.82, every node/.style={font=\scriptsize}]
   \fill[gray!7] (0, 0) rectangle (14, 20);
   \draw[gray!40, line width=1pt] (0, 0) rectangle (14, 20);
@@ -659,7 +722,9 @@ Los wireframes muestran la disposición de los elementos en las páginas princip
   \draw[gray!40, line width=0.4pt] (0.4, 0.75) -- (13.6, 0.75);
   \node[gray!50, font=\tiny] at (7, 0.35) {© 2026 Lulú Tapia — Todos los derechos reservados};
 \end{tikzpicture}
-\end{center}
+\caption{Wireframe 2 — Portafolio: galería filtrable por categoría artística con grid de 3 columnas.}
+\label{fig:wf-portafolio}
+\end{figure}
 
 % ┌──────────────────────────────────────────────────┐
 %  WIREFRAME 3 — SERVICIOS
@@ -667,7 +732,8 @@ Los wireframes muestran la disposición de los elementos en las páginas princip
 \newpage
 \subsection{Wireframe 3 — Servicios}
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}[scale=0.82, every node/.style={font=\scriptsize}]
   \fill[gray!7] (0, 0) rectangle (14, 20);
   \draw[gray!40, line width=1pt] (0, 0) rectangle (14, 20);
@@ -732,7 +798,9 @@ Los wireframes muestran la disposición de los elementos en las páginas princip
   \draw[gray!40, line width=0.4pt] (0.4, 0.75) -- (13.6, 0.75);
   \node[gray!50, font=\tiny] at (7, 0.35) {© 2026 Lulú Tapia — Todos los derechos reservados};
 \end{tikzpicture}
-\end{center}
+\caption{Wireframe 3 — Servicios: seis tarjetas de servicio con ícono, descripción y botón de cotización.}
+\label{fig:wf-servicios}
+\end{figure}
 
 % ┌──────────────────────────────────────────────────┐
 %  WIREFRAME 4 — CONTACTO
@@ -740,7 +808,8 @@ Los wireframes muestran la disposición de los elementos en las páginas princip
 \newpage
 \subsection{Wireframe 4 — Contacto}
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}[scale=0.82, every node/.style={font=\scriptsize}]
   \fill[gray!7] (0, 0) rectangle (14, 20);
   \draw[gray!40, line width=1pt] (0, 0) rectangle (14, 20);
@@ -756,7 +825,6 @@ Los wireframes muestran la disposición de los elementos en las páginas princip
   \node[gray!60] at (7, 17.4) {Hablemos de tu proyecto};
 
   % Columna izquierda: Formulario
-  % gap etiqueta→recuadro = 0.35 | gap recuadro→siguiente etiqueta = 0.35
   \node[anchor=west, font=\small\bfseries] at (0.4, 16.8) {Formulario de contacto};
 
   \node[anchor=west, gray!65] at (0.4, 16.00) {Nombre};
@@ -804,7 +872,9 @@ Los wireframes muestran la disposición de los elementos en las páginas princip
   \draw[gray!40, line width=0.4pt] (0.4, 0.75) -- (13.6, 0.75);
   \node[gray!50, font=\tiny] at (7, 0.35) {© 2026 Lulú Tapia — Todos los derechos reservados};
 \end{tikzpicture}
-\end{center}
+\caption{Wireframe 4 — Contacto: formulario de contacto y columna de información de redes sociales.}
+\label{fig:wf-contacto}
+\end{figure}
 
 
 % ───────────────────────────────────────────────────────────────
@@ -812,11 +882,24 @@ Los wireframes muestran la disposición de los elementos en las páginas princip
 % ───────────────────────────────────────────────────────────────
 \section{Conclusión}
 
-El sitio web de Lulú Tapia parte de una necesidad concreta: los artistas freelance requieren un espacio digital propio desde el que presentarse, mostrar su trabajo y generar oportunidades de negocio sin depender de plataformas externas.
+El sitio web de Lulú Tapia parte de una necesidad concreta y verificada: los artistas freelance requieren un espacio digital propio desde el que presentarse, mostrar su trabajo y generar oportunidades de negocio sin depender de plataformas externas. La aplicación combinada de la metodología de Garrett~(2011) y el proceso de IDEO~(2015) proporcionó un marco de trabajo riguroso que garantiza tanto la coherencia estructural como la pertinencia hacia las necesidades del usuario.
 
 La planeación aquí desarrollada define una estructura funcional y visualmente coherente con la identidad artística de Lourdes del Ángel Vásquez Tapia. Cada sección tiene un propósito claro dentro del recorrido del usuario, y el conjunto del sitio atiende tanto objetivos de comunicación como de negocio.
 
-La elección del dominio \textbf{lulutapia.com}, la navegación directa, el portafolio organizado por disciplina y el modelo de servicios freelance con paquetes predefinidos conforman una propuesta viable y adaptada al perfil de la artista. Las fases de diseño visual e implementación técnica que siguen tomarán esta planeación como referencia.
+\textbf{Pertinencia y viabilidad:} La propuesta es pertinente porque responde a una demanda real del mercado creativo digital y se alinea con las prácticas documentadas de branding personal (Neumeier, 2006) y diseño de experiencia de usuario (Norman, 2013). Es viable técnicamente porque se implementa con tecnologías web estándar (HTML5, CSS3, JavaScript) sin dependencias externas, lo que facilita el mantenimiento y la actualización futura del sitio. La opción de hospedaje gratuito en Vercel hace accesible el despliegue sin costo inicial.
+
+\textbf{Limitaciones:} El sitio en su estado actual no incluye un CMS (\textit{Content Management System}), por lo que la actualización del portafolio requiere editar el código fuente directamente. En una fase posterior se podría integrar una solución headless como Contentful o Sanity para separar contenido y código.
+
+\textbf{Liga virtual al sitio implementado:} El sitio web funcional resultado de este proyecto puede consultarse en la siguiente dirección:
+
+\begin{tcolorbox}[
+  colback=luluPurple!8, colframe=luluPurple,
+  arc=4pt, boxrule=0.8pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt
+]
+\centering
+{\large\bfseries\color{luluPurple} \url{https://lulutapia.vercel.app}}
+\end{tcolorbox}
 
 
 % ───────────────────────────────────────────────────────────────
@@ -824,22 +907,37 @@ La elección del dominio \textbf{lulutapia.com}, la navegación directa, el port
 % ───────────────────────────────────────────────────────────────
 \section{Referencias Bibliográficas}
 
-\begin{thebibliography}{9}
-
-\bibitem{golombisky2017}
-Golombisky, K., y Hagen, R. (2017). \textit{White Space Is Not Your Enemy: A Beginner's Guide to Communicating Visually Through Graphic, Web \& Multimedia Design} (3a ed.). Focal Press.
-
-\bibitem{morville2006}
-Morville, P., y Rosenfeld, L. (2006). \textit{Information Architecture for the World Wide Web} (3a ed.). O'Reilly Media.
-
-\bibitem{nielsen2006}
-Nielsen, J., y Loranger, H. (2006). \textit{Prioritizing Web Usability}. New Riders.
-
-\bibitem{neumeier2006}
-Neumeier, M. (2006). \textit{The Brand Gap: How to Bridge the Distance Between Business Strategy and Design}. New Riders.
+\begin{thebibliography}{99}
 
 \bibitem{clark2020}
-Clark, B. (2020). \textit{The content marketer's guide to personal branding}. Copyblogger. Recuperado de \url{https://copyblogger.com}
+Clark, B. (2020). \textit{The content marketer's guide to personal branding}. Copyblogger. \url{https://copyblogger.com}
+
+\bibitem{garrett2011}
+Garrett, J. J. (2011). \textit{The elements of user experience: User-centered design for the web and beyond} (2a ed.). New Riders.
+
+\bibitem{golombisky2017}
+Golombisky, K., y Hagen, R. (2017). \textit{White space is not your enemy: A beginner's guide to communicating visually through graphic, web \& multimedia design} (3a ed.). Focal Press.
+
+\bibitem{ideo2015}
+IDEO. (2015). \textit{The field guide to human-centered design}. IDEO.org. \url{https://www.designkit.org}
+
+\bibitem{krug2014}
+Krug, S. (2014). \textit{Don't make me think, revisited: A common sense approach to web usability} (3a ed.). New Riders.
+
+\bibitem{lupton2017}
+Lupton, E. (2017). \textit{Design is storytelling}. Cooper Hewitt, Smithsonian Design Museum.
+
+\bibitem{morville2006}
+Morville, P., y Rosenfeld, L. (2006). \textit{Information architecture for the world wide web} (3a ed.). O'Reilly Media.
+
+\bibitem{neumeier2006}
+Neumeier, M. (2006). \textit{The brand gap: How to bridge the distance between business strategy and design}. New Riders.
+
+\bibitem{nielsen2006}
+Nielsen, J., y Loranger, H. (2006). \textit{Prioritizing web usability}. New Riders.
+
+\bibitem{norman2013}
+Norman, D. A. (2013). \textit{The design of everyday things} (Ed. rev. y ampliada). Basic Books.
 
 \end{thebibliography}
 
