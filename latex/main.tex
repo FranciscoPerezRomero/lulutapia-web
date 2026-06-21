@@ -63,7 +63,7 @@
   {\large\bfseries\color{luluPurple}}{\thesection.}{0.6em}{}
   [\vspace{2pt}\color{luluPurple}\rule{\textwidth}{0.8pt}\vspace{4pt}]
 \titleformat{\subsection}
-  {\normalsize\bfseries\color{luluDark}}{\thesubsection.}{0.5em}{}
+  {\needspace{5\baselineskip}\normalsize\bfseries\color{luluDark}}{\thesubsection.}{0.5em}{}
 \titlespacing{\section}{0pt}{14pt}{6pt}
 \titlespacing{\subsection}{0pt}{8pt}{3pt}
 
@@ -85,6 +85,9 @@
 % Hipervínculos
 \usepackage[hidelinks]{hyperref}
 \usepackage{url}
+
+% Evitar que encabezados queden solos al final de página
+\usepackage{needspace}
 
 
 % ═══════════════════════════════════════════════════════════════
@@ -213,9 +216,9 @@ Se prefiere el dominio \texttt{.com} por su universalidad y reconocimiento globa
 
 El desarrollo del sitio web de Lulú Tapia se fundamenta en la integración de dos metodologías ampliamente reconocidas en el campo del diseño de experiencias digitales:
 
-\textbf{1. The Elements of User Experience — Jesse James Garrett (2011):} Garrett propone un modelo de cinco planos para el diseño de experiencias web: \textit{estrategia} (objetivos del sitio y necesidades del usuario), \textit{alcance} (funciones y contenido), \textit{estructura} (arquitectura de información), \textit{esqueleto} (diseño de interfaz y navegación) y \textit{superficie} (diseño visual). Este marco rige el presente documento: cada sección corresponde a un plano diferente de la metodología, desde los objetivos (§\,2) hasta los wireframes (§\,9) y el estilo visual (§\,7). Garrett~(2011) subraya que ``la experiencia de usuario no ocurre por accidente; es el resultado de decisiones deliberadas y sistemáticas'' (p. 17), principio rector de este proyecto.
+\textbf{1. The Elements of User Experience — Jesse James Garrett (2011):} Garrett propone un modelo de cinco planos para el diseño de experiencias web: \textit{estrategia} (objetivos del sitio y necesidades del usuario), \textit{alcance} (funciones y contenido), \textit{estructura} (arquitectura de información), \textit{esqueleto} (diseño de interfaz y navegación) y \textit{superficie} (diseño visual). Este marco rige el presente documento: cada sección corresponde a un plano diferente de la metodología, desde los objetivos (Sección~2) hasta los wireframes (Sección~9) y el estilo visual (Sección~7). Garrett~(2011) subraya que ``la experiencia de usuario no ocurre por accidente; es el resultado de decisiones deliberadas y sistemáticas'' (p. 17), principio rector de este proyecto.
 
-\textbf{2. Diseño Centrado en el Usuario — IDEO / Human-Centered Design (2015):} El proceso de IDEO estructura el diseño en tres fases: \textit{inspiración} (comprensión del contexto y las personas), \textit{ideación} (generación de soluciones) e \textit{implementación} (prototipado y entrega). La fase de inspiración se materializó en el análisis de audiencia (§\,4); la ideación, en la definición de secciones, mapa del sitio y sistema de navegación (§§\,3, 5, 6); y la implementación, en los wireframes de alta y baja fidelidad y el desarrollo del sitio web funcional.
+\textbf{2. Diseño Centrado en el Usuario — IDEO / Human-Centered Design (2015):} El proceso de IDEO estructura el diseño en tres fases: \textit{inspiración} (comprensión del contexto y las personas), \textit{ideación} (generación de soluciones) e \textit{implementación} (prototipado y entrega). La fase de inspiración se materializó en el análisis de audiencia (Sección~4); la ideación, en la definición de secciones, mapa del sitio y sistema de navegación (Secciones~3, 5 y 6); y la implementación, en los wireframes de alta y baja fidelidad y el desarrollo del sitio web funcional.
 
 La integración de ambas metodologías permite un proceso riguroso: la metodología de Garrett garantiza la coherencia estructural del producto, mientras que el enfoque de IDEO asegura que las decisiones de diseño respondan a necesidades reales y verificadas del usuario final (Norman, 2013).
 
@@ -888,13 +891,13 @@ El desarrollo del sitio web de Lulú Tapia siguió un proceso estructurado de ci
 
 El punto de partida fue identificar con claridad el problema a resolver: la artista contaba con trabajo de calidad pero carecía de una presencia digital centralizada que permitiera presentar su portafolio, comunicar sus servicios y recibir solicitudes de clientes de forma directa.
 
-Para validar esta necesidad se realizó un análisis de audiencia (detallado en §\,4) que identificó cuatro grupos de clientes potenciales: estudios de animación y producción, clientes independientes, desarrolladores de videojuegos indie y agencias creativas. Asimismo, se exploró el panorama competitivo observando sitios de referencia en el mercado de ilustración y animación freelance, lo que permitió detectar patrones de diseño eficaces y oportunidades de diferenciación para la propuesta de Lulú Tapia.
+Para validar esta necesidad se realizó un análisis de audiencia (detallado en la Sección~4) que identificó cuatro grupos de clientes potenciales: estudios de animación y producción, clientes independientes, desarrolladores de videojuegos indie y agencias creativas. Asimismo, se exploró el panorama competitivo observando sitios de referencia en el mercado de ilustración y animación freelance, lo que permitió detectar patrones de diseño eficaces y oportunidades de diferenciación para la propuesta de Lulú Tapia.
 
-Con base en este diagnóstico se definieron las seis secciones del sitio (§\,3), el mensaje central —\textit{«Arte que cobra vida»}— y los objetivos de negocio (§\,2), sentando así las bases estratégicas del proyecto.
+Con base en este diagnóstico se definieron las seis secciones del sitio (Sección~3), el mensaje central —\textit{«Arte que cobra vida»}— y los objetivos de negocio (Sección~2), sentando así las bases estratégicas del proyecto.
 
 \subsection{Etapa 2 — Arquitectura de Información y Estructura de Navegación}
 
-Una vez definido el contenido necesario, se trabajó en la organización lógica del sitio. Se elaboró el mapa del sitio (§\,5) representando de forma jerárquica la relación entre secciones y páginas, y se diseñó el flujo de navegación (§\,6) para garantizar que el recorrido del usuario fuera intuitivo y condujera de manera natural desde el descubrimiento de la artista hasta el contacto directo.
+Una vez definido el contenido necesario, se trabajó en la organización lógica del sitio. Se elaboró el mapa del sitio (Sección~5) representando de forma jerárquica la relación entre secciones y páginas, y se diseñó el flujo de navegación (Sección~6) para garantizar que el recorrido del usuario fuera intuitivo y condujera de manera natural desde el descubrimiento de la artista hasta el contacto directo.
 
 Esta etapa corresponde a los planos de \textit{alcance} y \textit{estructura} del modelo de Garrett~(2011): se tomaron decisiones sobre qué contenido incluir y en qué orden lógico presentarlo, priorizando siempre la facilidad de uso sobre la complejidad visual. Se optó por una estructura de página única con desplazamiento vertical (\textit{one-page scroll}), ya que la naturaleza del sitio —portafolio personal— no requiere múltiples niveles de profundidad de contenido.
 
@@ -902,9 +905,37 @@ Esta etapa corresponde a los planos de \textit{alcance} y \textit{estructura} de
 
 Con la arquitectura definida, el proceso avanzó hacia la materialización visual del sitio. Esta etapa comprendió dos fases:
 
-\textbf{Wireframes (baja fidelidad):} Se realizaron bocetos de las cuatro páginas principales —Inicio, Portafolio, Servicios y Contacto— sin diseño visual aplicado (§\,9). El objetivo fue definir la disposición de los elementos de interfaz: encabezado, cuerpos de texto, galerías, formularios y llamadas a la acción, antes de introducir color o tipografía. Este paso redujo el riesgo de tomar decisiones visuales prematuras que pudieran comprometer la usabilidad.
+\textbf{Wireframes (baja fidelidad):} Se realizaron bocetos de las cuatro páginas principales —Inicio, Portafolio, Servicios y Contacto— sin diseño visual aplicado (Sección~9). El objetivo fue definir la disposición de los elementos de interfaz: encabezado, cuerpos de texto, galerías, formularios y llamadas a la acción, antes de introducir color o tipografía. Este paso redujo el riesgo de tomar decisiones visuales prematuras que pudieran comprometer la usabilidad.
 
-\textbf{Mockups de alta fidelidad:} A partir de los wireframes se desarrollaron diseños visuales completos para las seis secciones del sitio, aplicando la paleta de color definida (\texttt{\#1A1A2E}, \texttt{\#6B3FA0}, \texttt{\#2DC7C7}, \texttt{\#E91E8C}), la tipografía seleccionada (\textit{Baloo 2} para títulos, \textit{Inter} para cuerpo) y la estética artesanal y expresiva que caracteriza la marca de la artista (parches de color decorativos, tarjetas con bordes iluminados, fondos oscuros con acentos vibrantes). Los mockups sirvieron como guía visual definitiva para la etapa de implementación y como herramienta de validación con la cliente.
+\textbf{Mockups de alta fidelidad:} A partir de los wireframes se desarrollaron diseños visuales completos para las seis secciones del sitio —Inicio, Portafolio, Servicios, Sobre mí, Blog y Contacto— aplicando la paleta de color definida (\texttt{\#1A1A2E}, \texttt{\#6B3FA0}, \texttt{\#2DC7C7}, \texttt{\#E91E8C}), la tipografía seleccionada (\textit{Baloo 2} para títulos, \textit{Inter} para cuerpo) y la estética artesanal y expresiva que caracteriza la marca de la artista: fondo oscuro profundo, tarjetas con bordes iluminados, parches de color decorativos rotados y acentos vibrantes que refuerzan la identidad visual de Lulú Tapia. Los mockups sirvieron como guía visual definitiva para la etapa de implementación y como herramienta de validación con la cliente.
+
+A continuación se presentan capturas representativas de los mockups de alta fidelidad correspondientes a las páginas de Inicio y Portafolio:
+
+\begin{figure}[H]
+  \centering
+  \IfFileExists{../pencil/mockup-home.png}{%
+    \includegraphics[width=0.82\textwidth]{../pencil/mockup-home.png}%
+  }{%
+    \fbox{\parbox{0.82\textwidth}{\centering\vspace{1.8cm}%
+      \textit{[Exportar frame «Home» desde Pencil y guardar como \texttt{pencil/mockup-home.png}]}%
+      \vspace{1.8cm}}}%
+  }
+  \caption{Mockup de alta fidelidad — Página de Inicio (\textit{Home}): hero con logo, tagline y galería de trabajos destacados.}
+  \label{fig:mockup-home}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \IfFileExists{../pencil/mockup-portafolio.png}{%
+    \includegraphics[width=0.82\textwidth]{../pencil/mockup-portafolio.png}%
+  }{%
+    \fbox{\parbox{0.82\textwidth}{\centering\vspace{1.8cm}%
+      \textit{[Exportar frame «Portafolio» desde Pencil y guardar como \texttt{pencil/mockup-portafolio.png}]}%
+      \vspace{1.8cm}}}%
+  }
+  \caption{Mockup de alta fidelidad — Portafolio: galería filtrable por categoría con vista previa de obras.}
+  \label{fig:mockup-portafolio}
+\end{figure}
 
 \subsection{Etapa 4 — Implementación del Sitio Web}
 
